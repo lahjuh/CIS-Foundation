@@ -1,0 +1,1472 @@
+{
+    "Benchmark": {
+        "id": "xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Microsoft_Azure_Foundations_Benchmark",
+        "title": "CIS Microsoft Azure Foundations Benchmark",
+        "description": "<xhtml:p>  This document, CIS Microsoft Azure Foundations Security Benchmark, provides prescriptive guidance for establishing a secure baseline configuration for Microsoft Azure. The scope of this benchmark is to establish the foundation level of security for anyone adopting Microsoft Azure Cloud. The benchmark is, however, not an exhaustive list of all possible security configurations and architecture. You should take the benchmark as a starting point and do the required site-specific tailoring wherever needed and when it is prudent to do so.</xhtml:p><xhtml:p>  To obtain the latest version of this guide, please visit https://www.cisecurity.org/cis-benchmarks/. If you have questions, comments, or have identified ways to improve this guide, please write us at benchmarkinfo@cisecurity.org.</xhtml:p>",
+        "status": [
+            {
+                "accepted": "2021-01-29"
+            }
+        ],
+        "platforms": [
+            "cpe:2.3:a:microsoft:azure:*:*:*:*:*:*:*:*"
+        ],
+        "version": "1.3.0",
+        "Profiles": [
+            {
+                "id": "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+                "title": "Level 1",
+                "description": "<xhtml:p>  Items in this profile intend to:</xhtml:p><xhtml:ul>  <xhtml:li>    be practical and prudent;  </xhtml:li>  <xhtml:li>    provide security focused best practice hardening of a technology; and  </xhtml:li>  <xhtml:li>    limit impact to the utility of the technology beyond acceptable means.  </xhtml:li></xhtml:ul>",
+                "selects": [
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.1_Ensure_that_multi-factor_authentication_is_enabled_for_all_privileged_users",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.3_Ensure_guest_users_are_reviewed_on_a_monthly_basis",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.5_Ensure_that_Number_of_methods_required_to_reset_is_set_to_2",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.6_Ensure_that_Number_of_days_before_users_are_asked_to_re-confirm_their_authentication_information_is_not_set_to_0",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.7_Ensure_that_Notify_users_on_password_resets_is_set_to_Yes",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.15_Ensure_that_Restrict_access_to_Azure_AD_administration_portal_is_set_to_Yes",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.20_Ensure_that_Require_Multi-Factor_Auth_to_join_devices_is_set_to_Yes",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.22_Ensure_Security_Defaults_is_enabled_on_Azure_Active_Directory",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.11_Ensure_that_Automatic_provisioning_of_monitoring_agent_is_set_to_On",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.12_Ensure_any_of_the_ASC_Default_policy_setting_is_not_set_to_Disabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.13_Ensure_Additional_email_addresses_is_configured_with_a_security_contact_email",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.14_Ensure_that_Notify_about_alerts_with_the_following_severity_is_set_to_High",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.15_Ensure_that_All_users_with_the_following_roles_is_set_to_Owner",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.1_Ensure_that_Secure_transfer_required_is_set_to_Enabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.2_Ensure_that_storage_account_access_keys_are_periodically_regenerated",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.4_Ensure_that_shared_access_signature_tokens_expire_within_an_hour",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.5_Ensure_that_Public_access_level_is_set_to_Private_for_blob_containers",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.8_Ensure_soft_delete_is_enabled_for_Azure_Storage",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.1.1_Ensure_that_Auditing_is_set_to_On",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.1.2_Ensure_that_Data_encryption_is_set_to_On_on_a_SQL_Database",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.1.3_Ensure_that_Auditing_Retention_is_greater_than_90_days",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.1_Ensure_Enforce_SSL_connection_is_set_to_ENABLED_for_PostgreSQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.2_Ensure_Enforce_SSL_connection_is_set_to_ENABLED_for_MySQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.3_Ensure_server_parameter_log_checkpoints_is_set_to_ON_for_PostgreSQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.4_Ensure_server_parameter_log_connections_is_set_to_ON_for_PostgreSQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.5_Ensure_server_parameter_log_disconnections_is_set_to_ON_for_PostgreSQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.6_Ensure_server_parameter_connection_throttling_is_set_to_ON_for_PostgreSQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.7_Ensure_server_parameter_log_retention_days_is_greater_than_3_days_for_PostgreSQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.8_Ensure_Allow_access_to_Azure_services_for_PostgreSQL_Database_Server_is_disabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.4_Ensure_that_Azure_Active_Directory_Admin_is_configured",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.1.1_Ensure_that_a_Diagnostics_Setting_exists",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.1.2_Ensure_Diagnostic_Setting_captures_appropriate_categories",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.1.3_Ensure_the_storage_container_storing_the_activity_logs_is_not_publicly_accessible",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.1.5_Ensure_that_logging_for_Azure_KeyVault_is_Enabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.1_Ensure_that_Activity_Log_Alert_exists_for_Create_Policy_Assignment",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.2_Ensure_that_Activity_Log_Alert_exists_for_Delete_Policy_Assignment",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.3_Ensure_that_Activity_Log_Alert_exists_for_Create_or_Update_Network_Security_Group",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.4_Ensure_that_Activity_Log_Alert_exists_for_Delete_Network_Security_Group",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.5_Ensure_that_Activity_Log_Alert_exists_for_Create_or_Update_Network_Security_Group_Rule",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.6_Ensure_that_activity_log_alert_exists_for_the_Delete_Network_Security_Group_Rule",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.7_Ensure_that_Activity_Log_Alert_exists_for_Create_or_Update_Security_Solution",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.8_Ensure_that_Activity_Log_Alert_exists_for_Delete_Security_Solution",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.9_Ensure_that_Activity_Log_Alert_exists_for_Create_or_Update_or_Delete_SQL_Server_Firewall_Rule",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.3_Ensure_that_Diagnostic_Logs_are_enabled_for_all_services_which_support_it.",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_6.1_Ensure_that_RDP_access_is_restricted_from_the_internet",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_6.2_Ensure_that_SSH_access_is_restricted_from_the_internet",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_6.3_Ensure_no_SQL_Databases_allow_ingress_0.0.0.00_ANY_IP",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_6.5_Ensure_that_Network_Watcher_is_Enabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_6.6_Ensure_that_UDP_Services_are_restricted_from_the_Internet",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_7.1_Ensure_Virtual_Machines_are_utilizing_Managed_Disks",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_7.4_Ensure_that_only_approved_extensions_are_installed",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_7.5_Ensure_that_the_latest_OS_Patches_for_all_Virtual_Machines_are_applied",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_7.6_Ensure_that_the_endpoint_protection_for_all_Virtual_Machines_is_installed",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_8.1_Ensure_that_the_expiration_date_is_set_on_all_keys",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_8.2_Ensure_that_the_expiration_date_is_set_on_all_Secrets",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_8.4_Ensure_the_key_vault_is_recoverable",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_8.5_Enable_role-based_access_control_RBAC_within_Azure_Kubernetes_Services",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.2_Ensure_web_app_redirects_all_HTTP_traffic_to_HTTPS_in_Azure_App_Service",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.3_Ensure_web_app_is_using_the_latest_version_of_TLS_encryption",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.5_Ensure_that_Register_with_Azure_Active_Directory_is_enabled_on_App_Service",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.6_Ensure_that_PHP_version_is_the_latest_if_used_to_run_the_web_app",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.7_Ensure_that_Python_version_is_the_latest_if_used_to_run_the_web_app",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.8_Ensure_that_Java_version_is_the_latest_if_used_to_run_the_web_app",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.9_Ensure_that_HTTP_Version_is_the_latest_if_used_to_run_the_web_app",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.10_Ensure_FTP_deployments_are_disabled",
+                            "selected": "true"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "xccdf_org.cisecurity.benchmarks_profile_Level_2",
+                "title": "Level 2",
+                "description": "<xhtml:p>  This profile extends the \"Level 1\" profile. Items in this profile exhibit one or more of the following characteristics:</xhtml:p><xhtml:ul>  <xhtml:li>    are intended for environments or use cases where security is more critical than manageability and usability  </xhtml:li>  <xhtml:li>    acts as defense in depth measure  </xhtml:li>  <xhtml:li>    may impact the utility or performance of the technology  </xhtml:li>  <xhtml:li>    may include additional licensing, cost, or addition of third party software  </xhtml:li></xhtml:ul>",
+                "selects": [
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.1_Ensure_that_multi-factor_authentication_is_enabled_for_all_privileged_users",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.2_Ensure_that_multi-factor_authentication_is_enabled_for_all_non-privileged_users",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.3_Ensure_guest_users_are_reviewed_on_a_monthly_basis",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.4_Ensure_that_Allow_users_to_remember_multi-factor_authentication_on_devices_they_trust_is_Disabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.5_Ensure_that_Number_of_methods_required_to_reset_is_set_to_2",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.6_Ensure_that_Number_of_days_before_users_are_asked_to_re-confirm_their_authentication_information_is_not_set_to_0",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.7_Ensure_that_Notify_users_on_password_resets_is_set_to_Yes",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.8_Ensure_that_Notify_all_admins_when_other_admins_reset_their_password_is_set_to_Yes",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.9_Ensure_that_Users_can_consent_to_apps_accessing_company_data_on_their_behalf_is_set_to_No",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.10_Ensure_that_Users_can_add_gallery_apps_to_their_Access_Panel_is_set_to_No",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.11_Ensure_that_Users_can_register_applications_is_set_to_No",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.12_Ensure_that_Guest_user_permissions_are_limited_is_set_to_Yes",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.13_Ensure_that_Members_can_invite_is_set_to_No",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.14_Ensure_that_Guests_can_invite_is_set_to_No",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.15_Ensure_that_Restrict_access_to_Azure_AD_administration_portal_is_set_to_Yes",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.16_Ensure_that_Restrict_user_ability_to_access_groups_features_in_the_Access_Pane_is_set_to_No",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.17_Ensure_that_Users_can_create_security_groups_in_Azure_Portals_is_set_to_No",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.18_Ensure_that_Owners_can_manage_group_membership_requests_in_the_Access_Panel_is_set_to_No",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.19_Ensure_that_Users_can_create_Microsoft_365_groups_in_Azure_Portals_is_set_to_No",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.20_Ensure_that_Require_Multi-Factor_Auth_to_join_devices_is_set_to_Yes",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.21_Ensure_that_no_custom_subscription_owner_roles_are_created",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.22_Ensure_Security_Defaults_is_enabled_on_Azure_Active_Directory",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_1.23_Ensure_Custom_Role_is_assigned_for_Administering_Resource_Locks",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.1_Ensure_that_Azure_Defender_is_set_to_On_for_Servers",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.2_Ensure_that_Azure_Defender_is_set_to_On_for_App_Service",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.3_Ensure_that_Azure_Defender_is_set_to_On_for_Azure_SQL_database_servers",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.4_Ensure_that_Azure_Defender_is_set_to_On_for_SQL_servers_on_machines",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.5_Ensure_that_Azure_Defender_is_set_to_On_for_Storage",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.6_Ensure_that_Azure_Defender_is_set_to_On_for_Kubernetes",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.7_Ensure_that_Azure_Defender_is_set_to_On_for_Container_Registries",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.8_Ensure_that_Azure_Defender_is_set_to_On_for_Key_Vault",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.9_Ensure_that_Windows_Defender_ATP_WDATP_integration_with_Security_Center_is_selected",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.10_Ensure_that_Microsoft_Cloud_App_Security_MCAS_integration_with_Security_Center_is_selected",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.11_Ensure_that_Automatic_provisioning_of_monitoring_agent_is_set_to_On",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.12_Ensure_any_of_the_ASC_Default_policy_setting_is_not_set_to_Disabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.13_Ensure_Additional_email_addresses_is_configured_with_a_security_contact_email",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.14_Ensure_that_Notify_about_alerts_with_the_following_severity_is_set_to_High",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_2.15_Ensure_that_All_users_with_the_following_roles_is_set_to_Owner",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.1_Ensure_that_Secure_transfer_required_is_set_to_Enabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.2_Ensure_that_storage_account_access_keys_are_periodically_regenerated",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.3_Ensure_Storage_logging_is_enabled_for_Queue_service_for_read_write_and_delete_requests",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.4_Ensure_that_shared_access_signature_tokens_expire_within_an_hour",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.5_Ensure_that_Public_access_level_is_set_to_Private_for_blob_containers",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.6_Ensure_default_network_access_rule_for_Storage_Accounts_is_set_to_deny",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.7_Ensure_Trusted_Microsoft_Services_is_enabled_for_Storage_Account_access",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.8_Ensure_soft_delete_is_enabled_for_Azure_Storage",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.9_Ensure_storage_for_critical_data_are_encrypted_with_Customer_Managed_Key",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.10_Ensure_Storage_logging_is_enabled_for_Blob_service_for_read_write_and_delete_requests",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_3.11_Ensure_Storage_logging_is_enabled_for_Table_service_for_read_write_and_delete_requests",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.1.1_Ensure_that_Auditing_is_set_to_On",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.1.2_Ensure_that_Data_encryption_is_set_to_On_on_a_SQL_Database",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.1.3_Ensure_that_Auditing_Retention_is_greater_than_90_days",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.2.1_Ensure_that_Advanced_Threat_Protection_ATP_on_a_SQL_server_is_set_to_Enabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.2.2_Ensure_that_Vulnerability_Assessment_VA_is_enabled_on_a_SQL_server_by_setting_a_Storage_Account",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.2.3_Ensure_that_VA_setting_Periodic_Recurring_Scans_is_enabled_on_a_SQL_server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.2.4_Ensure_that_VA_setting_Send_scan_reports_to_is_configured_for_a_SQL_server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.2.5_Ensure_that_VA_setting_Also_send_email_notifications_to_admins_and_subscription_owners_is_set_for_a_SQL_server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.1_Ensure_Enforce_SSL_connection_is_set_to_ENABLED_for_PostgreSQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.2_Ensure_Enforce_SSL_connection_is_set_to_ENABLED_for_MySQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.3_Ensure_server_parameter_log_checkpoints_is_set_to_ON_for_PostgreSQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.4_Ensure_server_parameter_log_connections_is_set_to_ON_for_PostgreSQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.5_Ensure_server_parameter_log_disconnections_is_set_to_ON_for_PostgreSQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.6_Ensure_server_parameter_connection_throttling_is_set_to_ON_for_PostgreSQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.7_Ensure_server_parameter_log_retention_days_is_greater_than_3_days_for_PostgreSQL_Database_Server",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.3.8_Ensure_Allow_access_to_Azure_services_for_PostgreSQL_Database_Server_is_disabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.4_Ensure_that_Azure_Active_Directory_Admin_is_configured",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_4.5_Ensure_SQL_servers_TDE_protector_is_encrypted_with_Customer-managed_key",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.1.1_Ensure_that_a_Diagnostics_Setting_exists",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.1.2_Ensure_Diagnostic_Setting_captures_appropriate_categories",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.1.3_Ensure_the_storage_container_storing_the_activity_logs_is_not_publicly_accessible",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.1.4_Ensure_the_storage_account_containing_the_container_with_activity_logs_is_encrypted_with_BYOK_Use_Your_Own_Key",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.1.5_Ensure_that_logging_for_Azure_KeyVault_is_Enabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.1_Ensure_that_Activity_Log_Alert_exists_for_Create_Policy_Assignment",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.2_Ensure_that_Activity_Log_Alert_exists_for_Delete_Policy_Assignment",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.3_Ensure_that_Activity_Log_Alert_exists_for_Create_or_Update_Network_Security_Group",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.4_Ensure_that_Activity_Log_Alert_exists_for_Delete_Network_Security_Group",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.5_Ensure_that_Activity_Log_Alert_exists_for_Create_or_Update_Network_Security_Group_Rule",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.6_Ensure_that_activity_log_alert_exists_for_the_Delete_Network_Security_Group_Rule",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.7_Ensure_that_Activity_Log_Alert_exists_for_Create_or_Update_Security_Solution",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.8_Ensure_that_Activity_Log_Alert_exists_for_Delete_Security_Solution",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.2.9_Ensure_that_Activity_Log_Alert_exists_for_Create_or_Update_or_Delete_SQL_Server_Firewall_Rule",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_5.3_Ensure_that_Diagnostic_Logs_are_enabled_for_all_services_which_support_it.",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_6.1_Ensure_that_RDP_access_is_restricted_from_the_internet",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_6.2_Ensure_that_SSH_access_is_restricted_from_the_internet",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_6.3_Ensure_no_SQL_Databases_allow_ingress_0.0.0.00_ANY_IP",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_6.4_Ensure_that_Network_Security_Group_Flow_Log_retention_period_is_greater_than_90_days",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_6.5_Ensure_that_Network_Watcher_is_Enabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_6.6_Ensure_that_UDP_Services_are_restricted_from_the_Internet",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_7.1_Ensure_Virtual_Machines_are_utilizing_Managed_Disks",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_7.2_Ensure_that_OS_and_Data_disks_are_encrypted_with_CMK",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_7.3_Ensure_that_Unattached_disks_are_encrypted_with_CMK",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_7.4_Ensure_that_only_approved_extensions_are_installed",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_7.5_Ensure_that_the_latest_OS_Patches_for_all_Virtual_Machines_are_applied",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_7.6_Ensure_that_the_endpoint_protection_for_all_Virtual_Machines_is_installed",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_7.7_Ensure_that_VHDs_are_encrypted",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_8.1_Ensure_that_the_expiration_date_is_set_on_all_keys",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_8.2_Ensure_that_the_expiration_date_is_set_on_all_Secrets",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_8.3_Ensure_that_Resource_Locks_are_set_for_mission_critical_Azure_resources",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_8.4_Ensure_the_key_vault_is_recoverable",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_8.5_Enable_role-based_access_control_RBAC_within_Azure_Kubernetes_Services",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.1_Ensure_App_Service_Authentication_is_set_on_Azure_App_Service",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.2_Ensure_web_app_redirects_all_HTTP_traffic_to_HTTPS_in_Azure_App_Service",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.3_Ensure_web_app_is_using_the_latest_version_of_TLS_encryption",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.4_Ensure_the_web_app_has_Client_Certificates_Incoming_client_certificates_set_to_On",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.5_Ensure_that_Register_with_Azure_Active_Directory_is_enabled_on_App_Service",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.6_Ensure_that_PHP_version_is_the_latest_if_used_to_run_the_web_app",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.7_Ensure_that_Python_version_is_the_latest_if_used_to_run_the_web_app",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.8_Ensure_that_Java_version_is_the_latest_if_used_to_run_the_web_app",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.9_Ensure_that_HTTP_Version_is_the_latest_if_used_to_run_the_web_app",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.10_Ensure_FTP_deployments_are_disabled",
+                            "selected": "true"
+                        }
+                    },
+                    {
+                        "select": {
+                            "idref": "xccdf_org.cisecurity.benchmarks_rule_9.11_Ensure_Azure_Keyvaults_are_used_to_store_secrets",
+                            "selected": "true"
+                        }
+                    }
+                ]
+            }
+        ],
+        "Guidelines": [
+            {
+                "Group": {
+                    "id": "xccdf_org.cisecurity.benchmarks_group_1_Identity_and_Access_Management",
+                    "title": "Identity and Access Management",
+                    "description": "<xhtml:p>  This section covers security recommendations that to follow to set identity and access management policies on an Azure Subscription. Identity and Access Management policies are the first step towards a defense-in-depth approach to securing an Azure Cloud Platform environment.</xhtml:p><xhtml:p>  Most of the recommendations from this section are marked as \"Not Scored\" because of the lack of \"Azure native CLI and API support\" to perform the respective audits. However, from a security posture standpoint, these recommendations are important. According to the last communication with the Microsoft Support team regarding \"Azure native CLI and API support\", Microsoft teams are working to enhance \"Microsoft graph API\" to support all these \"Azure AD\" functionalities. Once we get this capability through \"Microsoft Graph API\", we will update the involved recommendations with the respective audit and remediation steps to make them as scored.</xhtml:p>"
+                }
+            },
+            {
+                "Group": {
+                    "id": "xccdf_org.cisecurity.benchmarks_group_2_Security_Center",
+                    "title": "Security Center",
+                    "description": "<xhtml:p>  This section covers security recommendations to follow when setting various security policies on an Azure Subscription. A security policy defines the set of controls, which are recommended for resources within the specified Azure subscription. Please note that the majority of the recommendations mentioned in this section only produce an alert if a security violation is found. They do not actually enforce security settings by themselves. Alerts should be acted upon and remedied wherever possible.</xhtml:p>"
+                }
+            },
+            {
+                "Group": {
+                    "id": "xccdf_org.cisecurity.benchmarks_group_3_Storage_Accounts",
+                    "title": "Storage Accounts",
+                    "description": "<xhtml:p>  This section covers security recommendations to follow to set storage account policies on an Azure Subscription. An Azure storage account provides a unique namespace to store and access Azure Storage data objects.</xhtml:p>"
+                }
+            },
+            {
+                "Group": {
+                    "id": "xccdf_org.cisecurity.benchmarks_group_4_Database_Services",
+                    "title": "Database Services",
+                    "description": "<xhtml:p>  This section covers security recommendations to follow to set general database services policies on an Azure Subscription. Subsections will address specific database types.</xhtml:p>",
+                    "Groups": [
+                        {
+                            "Group": {
+                                "id": "xccdf_org.cisecurity.benchmarks_group_4.1_SQL_Server_-_Auditing",
+                                "title": "SQL Server - Auditing",
+                                "description": "<xhtml:p>  Auditing for Azure SQL Servers and SQL Databases tracks database events and writes them to an audit log Azure storage account, Log Analytics workspace or Event Hubs.Auditing helps to maintain regulatory compliance, understand database activity, and gain insight into discrepancies and anomalies that could indicate business concerns or suspected security violations.Auditing enables and facilitates adherence to compliance standards, although it doesn't guarantee compliance.</xhtml:p><xhtml:p>  Default SQL Server Auditing profile set on a SQL server in inherited to all the SQL Databases which are part of the SQL server.</xhtml:p>",
+                                "Rules": [
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.1.1_Ensure_that_Auditing_is_set_to_On",
+                                            "title": "Ensure that 'Auditing' is set to 'On'",
+                                            "description": "<xhtml:p>  Enable auditing on SQL Servers.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  The Azure platform allows a SQL server to be created as a service. Enabling auditing at the server level ensures that all existing and newly created databases on the SQL server instance are audited.Auditing policy applied on the SQL database does not override auditing policy and settings applied on the particular SQL server where the database is hosted.</xhtml:p><xhtml:p>  Auditing tracks database events and writes them to an audit log in the Azure storage account. It also helps to maintain regulatory compliance, understand database activity, and gain insight into discrepancies and anomalies that could indicate business concerns or suspected security violations.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          SQL servers        </xhtml:span>      </xhtml:li>      <xhtml:li>        For each server instance      </xhtml:li>      <xhtml:li>        Click on         <xhtml:span class=\"inline_block\">          Auditing        </xhtml:span>      </xhtml:li>      <xhtml:li>        Set         <xhtml:span class=\"inline_block\">          Auditing        </xhtml:span>         to         <xhtml:span class=\"inline_block\">          On        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure PowerShell      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Get the list of all SQL Servers    </xhtml:p>    <xhtml:code class=\"code_block\">      Get-AzureRmSqlServer    </xhtml:code>    <xhtml:p>      For each Server, enable auditing.    </xhtml:p>    <xhtml:code class=\"code_block\">      Set-AzureRmSqlServerAuditingPolicy -ResourceGroupName &lt;resource group name&gt; -ServerName &lt;server name&gt; -AuditType &lt;audit type&gt; -StorageAccountName &lt;storage account name&gt;    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.1.2_Ensure_that_Data_encryption_is_set_to_On_on_a_SQL_Database",
+                                            "title": "Ensure that 'Data encryption' is set to 'On' on a SQL Database",
+                                            "description": "<xhtml:p>  Enable Transparent Data Encryption on every SQL server.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Azure SQL Database transparent data encryption helps protect against the threat of malicious activity by performing real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          SQL databases        </xhtml:span>      </xhtml:li>      <xhtml:li>        For each DB instance      </xhtml:li>      <xhtml:li>        Click on         <xhtml:span class=\"inline_block\">          Transparent data encryption        </xhtml:span>      </xhtml:li>      <xhtml:li>        Set         <xhtml:span class=\"inline_block\">          Data encryption        </xhtml:span>         to         <xhtml:span class=\"inline_block\">          On        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface 2.0      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to enable       <xhtml:span class=\"inline_block\">        Transparent data encryption      </xhtml:span>       for SQL DB instance.    </xhtml:p>    <xhtml:code class=\"code_block\">      az sql db tde set --resource-group &lt;resourceGroup&gt; --server &lt;dbServerName&gt; --database &lt;dbName&gt; --status Enabled    </xhtml:code>    <xhtml:p>      <xhtml:strong>        Note:      </xhtml:strong>    </xhtml:p>    <xhtml:ul>      <xhtml:li>        <xhtml:p>          TDE cannot be used to encrypt the logical master database in SQL Database. The master database contains objects that are needed to perform the TDE operations on the user databases.        </xhtml:p>      </xhtml:li>      <xhtml:li>        <xhtml:p>          Azure Portal does not show master databases per SQL server. However, CLI/API responses will show master databases.        </xhtml:p>      </xhtml:li>    </xhtml:ul>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.1.3_Ensure_that_Auditing_Retention_is_greater_than_90_days",
+                                            "title": "Ensure that 'Auditing' Retention is 'greater than 90 days'",
+                                            "description": "<xhtml:p>  SQL Server Audit Retention should be configured to be greater than 90 days.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Audit Logs can be used to check for anomalies and give insight into suspected breaches or misuse of information and access.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          SQL servers        </xhtml:span>      </xhtml:li>      <xhtml:li>        For each server instance      </xhtml:li>      <xhtml:li>        Click on         <xhtml:span class=\"inline_block\">          Auditing        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Storage Details        </xhtml:span>      </xhtml:li>      <xhtml:li>        Set         <xhtml:span class=\"inline_block\">          Retention (days)        </xhtml:span>         setting         <xhtml:span class=\"inline_block\">          greater than 90 days        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          OK        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Save        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure PowerShell      </xhtml:strong>    </xhtml:p>    <xhtml:p>      For each Server, set retention policy for more than or equal to 90 days    </xhtml:p>    <xhtml:code class=\"code_block\">      set-AzureRmSqlServerAuditing -ResourceGroupName &lt;resource group name&gt; -ServerName &lt;server name&gt; -RetentionInDays &lt;Number of Days to retain the audit logs, should be 90days minimum&gt;    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Group": {
+                                "id": "xccdf_org.cisecurity.benchmarks_group_4.2_SQL_Server_-_Azure_Defender_for_SQL",
+                                "title": "SQL Server - Azure Defender for SQL",
+                                "description": "<xhtml:p>  Azure Defender for SQL provides a layer of security, which enables customers to detect and respond to potential threats as they occur by providing security alerts on anomalous activities. Users will receive an alert upon suspicious database activities, potential vulnerabilities, and SQL injection attacks, as well as anomalous database access patterns. SQL Server Threat Detection alerts provide details of suspicious activity and recommend action on how to investigate and mitigate the threat.</xhtml:p><xhtml:p>  Azure Defender for SQL may incur additional cost per SQL server.</xhtml:p>",
+                                "Rules": [
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.2.1_Ensure_that_Advanced_Threat_Protection_ATP_on_a_SQL_server_is_set_to_Enabled",
+                                            "title": "Ensure that Advanced Threat Protection (ATP) on a SQL server is set to 'Enabled'",
+                                            "description": "<xhtml:p>  Enable \"Azure Defender for SQL\" on critical SQL Servers.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Azure Defender for SQL is a unified package for advanced SQL security capabilities. Azure Defender is available for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. It includes functionality for discovering and classifying sensitive data, surfacing and mitigating potential database vulnerabilities, and detecting anomalous activities that could indicate a threat to your database. It provides a single go-to location for enabling and managing these capabilities.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          SQL servers        </xhtml:span>      </xhtml:li>      <xhtml:li>        For each server instance      </xhtml:li>      <xhtml:li>        Click on         <xhtml:span class=\"inline_block\">          Azure Defender for SQL        </xhtml:span>      </xhtml:li>      <xhtml:li>        Set         <xhtml:span class=\"inline_block\">          Azure Defender for SQL        </xhtml:span>         to         <xhtml:span class=\"inline_block\">          On        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure PowerShell      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Enable       <xhtml:span class=\"inline_block\">        Advanced Data Security      </xhtml:span>       for a SQL Server:    </xhtml:p>    <xhtml:code class=\"code_block\">      Set-AzSqlServerThreatDetectionPolicy -ResourceGroupName &lt;resource group name&gt; -ServerName &lt;server name&gt; -EmailAdmins $True    </xhtml:code>    <xhtml:p>      Note:    </xhtml:p>    <xhtml:ul>      <xhtml:li>        Enabling 'Azure Defender for SQL' from the Azure portal enables         <xhtml:span class=\"inline_block\">          Threat Detection        </xhtml:span>      </xhtml:li>      <xhtml:li>        Using Powershell command         <xhtml:span class=\"inline_block\">          Set-AzSqlServerThreatDetectionPolicy        </xhtml:span>         enables         <xhtml:span class=\"inline_block\">          Azure Defender for SQL        </xhtml:span>         for a SQL server      </xhtml:li>    </xhtml:ul>    <xhtml:p class=\"bold\">      Impact:    </xhtml:p>    <xhtml:p>      <xhtml:p>        Azure Defender for SQL is a paid feature and will incur additional cost for each SQL server.      </xhtml:p>    </xhtml:p>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.2.2_Ensure_that_Vulnerability_Assessment_VA_is_enabled_on_a_SQL_server_by_setting_a_Storage_Account",
+                                            "title": "Ensure that Vulnerability Assessment (VA) is enabled on a SQL server by setting a Storage Account",
+                                            "description": "<xhtml:p>  Enable Vulnerability Assessment (VA) service scans for critical SQL servers and corresponding SQL databases.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Enabling Azure Defender for SQL server does not enables Vulnerability Assessment capability for individual SQL databases unless storage account is set to store the scanning data and reports.</xhtml:p><xhtml:p>  The Vulnerability Assessment service scans databases for known security vulnerabilities and highlight deviations from best practices, such as misconfigurations, excessive permissions, and unprotected sensitive data.Results of the scan include actionable steps to resolve each issue and provide customized remediation scripts where applicable. Additionally an assessment report can be customized by setting an acceptable baseline for permission configurations, feature configurations, and database settings.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          SQL servers        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select a server instance      </xhtml:li>      <xhtml:li>        Click on         <xhtml:span class=\"inline_block\">          Security Center        </xhtml:span>      </xhtml:li>      <xhtml:li>        <xhtml:ol>          <xhtml:li>            Select             <xhtml:span class=\"inline_block\">              Configure            </xhtml:span>             next to             <xhtml:span class=\"inline_block\">              Enabled at subscription-level            </xhtml:span>          </xhtml:li>        </xhtml:ol>      </xhtml:li>      <xhtml:li>        In Section         <xhtml:span class=\"inline_block\">          Vulnerability Assessment Settings        </xhtml:span>        , Click         <xhtml:span class=\"inline_block\">          Storage Account        </xhtml:span>      </xhtml:li>      <xhtml:li>        Choose Storage Account (Existing or         <xhtml:span class=\"inline_block\">          Create New        </xhtml:span>        ). Click         <xhtml:span class=\"inline_block\">          Ok        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Save        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure PowerShell      </xhtml:strong>    </xhtml:p>    <xhtml:p>      If not already, Enable       <xhtml:span class=\"inline_block\">        Azure Defender for a SQL      </xhtml:span>      :    </xhtml:p>    <xhtml:code class=\"code_block\">      Set-AZSqlServerThreatDetectionPolicy -ResourceGroupName &lt;resource group name&gt; -ServerName &lt;server name&gt; -EmailAdmins $True    </xhtml:code>    <xhtml:p>      To enable ADS-VA service by setting Storage Account    </xhtml:p>    <xhtml:code class=\"code_block\">      Update-AzSqlServerVulnerabilityAssessmentSetting `      <br/>                  -ResourceGroupName \"&lt;resource group name&gt;\"`      <br/>                  -ServerName \"&lt;Server Name&gt;\"`      <br/>                  -StorageAccountName \"&lt;Storage Name from same subscription and same Location\" `      <br/>                  -ScanResultsContainerName \"vulnerability-assessment\" `      <br/>                  -RecurringScansInterval Weekly `      <br/>                  -EmailSubscriptionAdmins $true `      <br/>                  -NotificationEmail @(\"mail1@mail.com\" , \"mail2@mail.com\")    </xhtml:code>    <xhtml:p class=\"bold\">      Impact:    </xhtml:p>    <xhtml:p>      <xhtml:p>        Enabling the         <xhtml:span class=\"inline_block\">          Azure Defender for SQL        </xhtml:span>         features will incur additional costs for each SQL server.      </xhtml:p>    </xhtml:p>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.2.3_Ensure_that_VA_setting_Periodic_Recurring_Scans_is_enabled_on_a_SQL_server",
+                                            "title": "Ensure that VA setting Periodic Recurring Scans is enabled on a SQL server",
+                                            "description": "<xhtml:p>  Enable Vulnerability Assessment (VA) Periodic recurring scans for critical SQL servers and corresponding SQL databases.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  VA setting 'Periodic recurring scans' schedules periodic (weekly) vulnerability scanning for the SQL server and corresponding Databases.Periodic and regular vulnerability scanning provides risk visibility based on updated known vulnerability signatures and best practices.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          SQL servers        </xhtml:span>      </xhtml:li>      <xhtml:li>        For each server instance      </xhtml:li>      <xhtml:li>        Click on         <xhtml:span class=\"inline_block\">          Security Center        </xhtml:span>      </xhtml:li>      <xhtml:li>        In Section         <xhtml:span class=\"inline_block\">          Vulnerability Assessment Settings        </xhtml:span>        , set         <xhtml:span class=\"inline_block\">          Storage Account        </xhtml:span>         if not already      </xhtml:li>      <xhtml:li>        Toggle 'Periodic recurring scans' to ON.      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Save        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure PowerShell      </xhtml:strong>    </xhtml:p>    <xhtml:p>      If not already, Enable       <xhtml:span class=\"inline_block\">        Advanced Data Security      </xhtml:span>       for a SQL Server:    </xhtml:p>    <xhtml:code class=\"code_block\">      Set-AZSqlServerThreatDetectionPolicy -ResourceGroupName &lt;resource group name&gt; -ServerName &lt;server name&gt; -EmailAdmins $True    </xhtml:code>    <xhtml:p>      To enable ADS-VA service with 'Periodic recurring scans'    </xhtml:p>    <xhtml:code class=\"code_block\">      Update-AzSqlServerVulnerabilityAssessmentSetting `      <br/>                  -ResourceGroupName \"&lt;resource group name&gt;\"`      <br/>                  -ServerName \"&lt;Server Name&gt;\"`      <br/>                  -StorageAccountName \"&lt;Storage Name from same subscription and same Location\" `      <br/>                  -ScanResultsContainerName \"vulnerability-assessment\" `      <br/>                  -RecurringScansInterval Weekly `      <br/>                  -EmailSubscriptionAdmins $true `      <br/>                  -NotificationEmail @(\"mail1@mail.com\" , \"mail2@mail.com\")    </xhtml:code>    <xhtml:p class=\"bold\">      Impact:    </xhtml:p>    <xhtml:p>      <xhtml:p>        Enabling the         <xhtml:span class=\"inline_block\">          Azure Defender for SQL        </xhtml:span>         feature will incur additional costs for each SQL server.      </xhtml:p>    </xhtml:p>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.2.4_Ensure_that_VA_setting_Send_scan_reports_to_is_configured_for_a_SQL_server",
+                                            "title": "Ensure that VA setting Send scan reports to is configured for a SQL server",
+                                            "description": "<xhtml:p>  Configure 'Send scan reports to' with email ids of concerned data owners/stakeholders for a critical SQL servers.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Vulnerability Assessment (VA) scan reports and alerts will be sent to email ids configured at 'Send scan reports to'. This may help in reducing time required for identifying risks and taking corrective measures.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          SQL servers        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select a server instance      </xhtml:li>      <xhtml:li>        Click on         <xhtml:span class=\"inline_block\">          Security Center        </xhtml:span>      </xhtml:li>      <xhtml:li>        Ensure that         <xhtml:span class=\"inline_block\">          Azure Defender for SQL        </xhtml:span>         is set to         <xhtml:span class=\"inline_block\">          Enabled        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Configure        </xhtml:span>         next to         <xhtml:span class=\"inline_block\">          Enabled at subscription-level        </xhtml:span>      </xhtml:li>      <xhtml:li>        In Section         <xhtml:span class=\"inline_block\">          Vulnerability Assessment Settings        </xhtml:span>        , configure         <xhtml:span class=\"inline_block\">          Storage Accounts        </xhtml:span>         if not already      </xhtml:li>      <xhtml:li>        Configure email ids for concerned data owners/stakeholders at 'Send scan reports to'      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Save        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure PowerShell      </xhtml:strong>    </xhtml:p>    <xhtml:p>      If not already, Enable       <xhtml:span class=\"inline_block\">        Advanced Data Security      </xhtml:span>       for a SQL Server:    </xhtml:p>    <xhtml:code class=\"code_block\">      Set-AZSqlServerThreatDetectionPolicy -ResourceGroupName &lt;resource group name&gt; -ServerName &lt;server name&gt; -EmailAdmins $True    </xhtml:code>    <xhtml:p>      To enable ADS-VA service and Set 'Send scan reports to'    </xhtml:p>    <xhtml:code class=\"code_block\">      Update-AzSqlServerVulnerabilityAssessmentSetting `      <br/>                  -ResourceGroupName \"&lt;resource group name&gt;\"`      <br/>                  -ServerName \"&lt;Server Name&gt;\"`      <br/>                  -StorageAccountName \"&lt;Storage Name from same subscription and same Location\" `      <br/>                  -ScanResultsContainerName \"vulnerability-assessment\" `      <br/>                  -RecurringScansInterval Weekly `      <br/>                  -EmailSubscriptionAdmins $true `      <br/>                  -NotificationEmail @(\"mail1@mail.com\" , \"mail2@mail.com\")    </xhtml:code>    <xhtml:p class=\"bold\">      Impact:    </xhtml:p>    <xhtml:p>      <xhtml:p>        Enabling the         <xhtml:span class=\"inline_block\">          Azure Defender for SQL        </xhtml:span>         features will incur additional costs for each SQL server.      </xhtml:p>    </xhtml:p>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.2.5_Ensure_that_VA_setting_Also_send_email_notifications_to_admins_and_subscription_owners_is_set_for_a_SQL_server",
+                                            "title": "Ensure that VA setting 'Also send email notifications to admins and subscription owners' is set for a SQL server",
+                                            "description": "<xhtml:p>  Enable Vulnerability Assessment (VA) setting 'Also send email notifications to admins and subscription owners'.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  VA scan reports and alerts will be sent to admins and subscription owners by enabling setting 'Also send email notifications to admins and subscription owners'. This may help in reducing time required for identifying risks and taking corrective measures.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          SQL servers        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select a server instance      </xhtml:li>      <xhtml:li>        Click on         <xhtml:span class=\"inline_block\">          Security Center        </xhtml:span>      </xhtml:li>      <xhtml:li>        <xhtml:ol>          <xhtml:li>            Select             <xhtml:span class=\"inline_block\">              Configure            </xhtml:span>             next to             <xhtml:span class=\"inline_block\">              Enabled at subscription-level            </xhtml:span>          </xhtml:li>        </xhtml:ol>      </xhtml:li>      <xhtml:li>        In Section         <xhtml:span class=\"inline_block\">          Vulnerability Assessment Settings        </xhtml:span>        , configure         <xhtml:span class=\"inline_block\">          Storage Accounts        </xhtml:span>         if not already      </xhtml:li>      <xhtml:li>        Check/enable 'Also send email notifications to admins and subscription owners'      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Save        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure PowerShell      </xhtml:strong>    </xhtml:p>    <xhtml:p>      If not already, Enable       <xhtml:span class=\"inline_block\">        Advanced Data Security      </xhtml:span>       for a SQL Server:    </xhtml:p>    <xhtml:code class=\"code_block\">      Set-AZSqlServerThreatDetectionPolicy -ResourceGroupName &lt;resource group name&gt; -ServerName &lt;server name&gt; -EmailAdmins $True    </xhtml:code>    <xhtml:p>      To enable ADS-VA service and Set 'Also send email notifications to admins and subscription owners'    </xhtml:p>    <xhtml:code class=\"code_block\">      Update-AzSqlServerVulnerabilityAssessmentSetting `      <br/>                  -ResourceGroupName \"&lt;resource group name&gt;\"`      <br/>                  -ServerName \"&lt;Server Name&gt;\"`      <br/>                  -StorageAccountName \"&lt;Storage Name from same subscription and same Location\" `      <br/>                  -ScanResultsContainerName \"vulnerability-assessment\" `      <br/>                  -RecurringScansInterval Weekly `      <br/>                  -EmailSubscriptionAdmins $true `      <br/>                  -NotificationEmail @(\"mail1@mail.com\" , \"mail2@mail.com\")    </xhtml:code>    <xhtml:p class=\"bold\">      Impact:    </xhtml:p>    <xhtml:p>      <xhtml:p>        Enabling the         <xhtml:span class=\"inline_block\">          Azure Defender for SQL        </xhtml:span>         features will incur additional costs for each SQL server.      </xhtml:p>    </xhtml:p>  </xhtml:p></xhtml:div>"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Group": {
+                                "id": "xccdf_org.cisecurity.benchmarks_group_4.3_PostgreSQL_Database_Server",
+                                "title": "PostgreSQL Database Server",
+                                "description": "<xhtml:p>  This section groups security best practices/recommendations for Azure PostgreSQL Database Servers.</xhtml:p>",
+                                "Rules": [
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.3.1_Ensure_Enforce_SSL_connection_is_set_to_ENABLED_for_PostgreSQL_Database_Server",
+                                            "title": "Ensure 'Enforce SSL connection' is set to 'ENABLED' for PostgreSQL Database Server",
+                                            "description": "<xhtml:p>  Enable   <xhtml:span class=\"inline_block\">    SSL connection  </xhtml:span>   on   <xhtml:span class=\"inline_block\">    PostgreSQL  </xhtml:span>   Servers.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  <xhtml:span class=\"inline_block\">    SSL connectivity  </xhtml:span>   helps to provide a new layer of security, by connecting database server to client applications using Secure Sockets Layer (SSL). Enforcing SSL connections between database server and client applications helps protect against \"man in the middle\" attacks by encrypting the data stream between the server and application.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Login to Azure Portal using https://portal.azure.com      </xhtml:li>      <xhtml:li>        Go to Azure Database for         <xhtml:span class=\"inline_block\">          PostgreSQL server        </xhtml:span>      </xhtml:li>      <xhtml:li>        For each database, click on         <xhtml:span class=\"inline_block\">          Connection security        </xhtml:span>      </xhtml:li>      <xhtml:li>        In         <xhtml:span class=\"inline_block\">          SSL        </xhtml:span>         settings.      </xhtml:li>      <xhtml:li>        Click on         <xhtml:span class=\"inline_block\">          ENABLED        </xhtml:span>         to Enforce SSL connection      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface 2.0      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to       <xhtml:span class=\"inline_block\">        enforce ssl connection      </xhtml:span>       for       <xhtml:span class=\"inline_block\">        PostgreSQL      </xhtml:span>       Database.    </xhtml:p>    <xhtml:code class=\"code_block\">          az postgres server update --resource-group &lt;resourceGroupName&gt; --name &lt;serverName&gt; --ssl-enforcement Enabled    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.3.2_Ensure_Enforce_SSL_connection_is_set_to_ENABLED_for_MySQL_Database_Server",
+                                            "title": "Ensure 'Enforce SSL connection' is set to 'ENABLED' for MySQL Database Server",
+                                            "description": "<xhtml:p>  Enable   <xhtml:span class=\"inline_block\">    SSL connection  </xhtml:span>   on   <xhtml:span class=\"inline_block\">    MYSQL  </xhtml:span>   Servers.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  SSL connectivity helps to provide a new layer of security, by connecting database server to client applications using Secure Sockets Layer (SSL). Enforcing SSL connections between database server and client applications helps protect against \"man in the middle\" attacks by encrypting the data stream between the server and application.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Login to Azure Portal using https://portal.azure.com      </xhtml:li>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Azure Database        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          MySQL server        </xhtml:span>      </xhtml:li>      <xhtml:li>        For each database, click on         <xhtml:span class=\"inline_block\">          Connection security        </xhtml:span>      </xhtml:li>      <xhtml:li>        In         <xhtml:span class=\"inline_block\">          SSL        </xhtml:span>         settings      </xhtml:li>      <xhtml:li>        Click on         <xhtml:span class=\"inline_block\">          ENABLED        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          Enforce SSL connection        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface 2.0      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to set MYSQL Databases to Enforce SSL connection.    </xhtml:p>    <xhtml:code class=\"code_block\">          az mysql server update --resource-group &lt;resourceGroupName&gt; --name &lt;serverName&gt; --ssl-enforcement Enabled    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.3.3_Ensure_server_parameter_log_checkpoints_is_set_to_ON_for_PostgreSQL_Database_Server",
+                                            "title": "Ensure server parameter 'log_checkpoints' is set to 'ON' for PostgreSQL Database Server",
+                                            "description": "<xhtml:p>  Enable   <xhtml:span class=\"inline_block\">    log_checkpoints  </xhtml:span>   on   <xhtml:span class=\"inline_block\">    PostgreSQL Servers  </xhtml:span>  .</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Enabling   <xhtml:span class=\"inline_block\">    log_checkpoints  </xhtml:span>   helps the PostgreSQL Database to   <xhtml:span class=\"inline_block\">    Log each checkpoint  </xhtml:span>   in turn generates query and error logs. However, access to transaction logs is not supported. Query and error logs can be used to identify, troubleshoot, and repair configuration errors and sub-optimal performance.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Login to Azure Portal using https://portal.azure.com      </xhtml:li>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Azure Database        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          PostgreSQL        </xhtml:span>         server      </xhtml:li>      <xhtml:li>        For each database, click on         <xhtml:span class=\"inline_block\">          Server parameters        </xhtml:span>      </xhtml:li>      <xhtml:li>        Search for         <xhtml:span class=\"inline_block\">          log_checkpoints        </xhtml:span>        .      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          ON        </xhtml:span>         and save.      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface 2.0      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to update       <xhtml:span class=\"inline_block\">        log_checkpoints      </xhtml:span>       configuration.    </xhtml:p>    <xhtml:code class=\"code_block\">          az postgres server configuration set --resource-group &lt;resourceGroupName&gt; --server-name &lt;serverName&gt; --name log_checkpoints --value on    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.3.4_Ensure_server_parameter_log_connections_is_set_to_ON_for_PostgreSQL_Database_Server",
+                                            "title": "Ensure server parameter 'log_connections' is set to 'ON' for PostgreSQL Database Server",
+                                            "description": "<xhtml:p>  Enable   <xhtml:span class=\"inline_block\">    log_connections  </xhtml:span>   on   <xhtml:span class=\"inline_block\">    PostgreSQL Servers  </xhtml:span>  .</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Enabling   <xhtml:span class=\"inline_block\">    log_connections  </xhtml:span>   helps PostgreSQL Database to log attempted connection to the server, as well as successful completion of client authentication. Log data can be used to identify, troubleshoot, and repair configuration errors and suboptimal performance.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Login to Azure Portal using https://portal.azure.com      </xhtml:li>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Azure Database        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          PostgreSQL server        </xhtml:span>      </xhtml:li>      <xhtml:li>        For each database, click on         <xhtml:span class=\"inline_block\">          Server parameters        </xhtml:span>      </xhtml:li>      <xhtml:li>        Search for         <xhtml:span class=\"inline_block\">          log_connections        </xhtml:span>        .      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          ON        </xhtml:span>         and save.      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface 2.0      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to update       <xhtml:span class=\"inline_block\">        log_connections      </xhtml:span>       configuration.    </xhtml:p>    <xhtml:code class=\"code_block\">          az postgres server configuration set --resource-group &lt;resourceGroupName&gt; --server-name &lt;serverName&gt; --name log_connections --value on    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.3.5_Ensure_server_parameter_log_disconnections_is_set_to_ON_for_PostgreSQL_Database_Server",
+                                            "title": "Ensure server parameter 'log_disconnections' is set to 'ON' for PostgreSQL Database Server",
+                                            "description": "<xhtml:p>  Enable   <xhtml:span class=\"inline_block\">    log_disconnections  </xhtml:span>   on   <xhtml:span class=\"inline_block\">    PostgreSQL Servers  </xhtml:span>  .</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Enabling   <xhtml:span class=\"inline_block\">    log_disconnections  </xhtml:span>   helps PostgreSQL Database to   <xhtml:span class=\"inline_block\">    Logs end of a session  </xhtml:span>  , including duration, which in turn generates query and error logs. Query and error logs can be used to identify, troubleshoot, and repair configuration errors and sub-optimal performance.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Login to Azure Portal using https://portal.azure.com      </xhtml:li>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Azure Database        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          PostgreSQL server        </xhtml:span>      </xhtml:li>      <xhtml:li>        For each database, click on         <xhtml:span class=\"inline_block\">          Server parameters        </xhtml:span>      </xhtml:li>      <xhtml:li>        Search for         <xhtml:span class=\"inline_block\">          log_disconnections        </xhtml:span>        .      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          ON        </xhtml:span>         and save.      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface 2.0      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to update       <xhtml:span class=\"inline_block\">        log_disconnections      </xhtml:span>       configuration.    </xhtml:p>    <xhtml:code class=\"code_block\">          az postgres server configuration set --resource-group &lt;resourceGroupName&gt; --server-name &lt;serverName&gt; --name log_disconnections --value on    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.3.6_Ensure_server_parameter_connection_throttling_is_set_to_ON_for_PostgreSQL_Database_Server",
+                                            "title": "Ensure server parameter 'connection_throttling' is set to 'ON' for PostgreSQL Database Server",
+                                            "description": "<xhtml:p>  Enable   <xhtml:span class=\"inline_block\">    connection_throttling  </xhtml:span>   on   <xhtml:span class=\"inline_block\">    PostgreSQL Servers  </xhtml:span>  .</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Enabling   <xhtml:span class=\"inline_block\">    connection_throttling  </xhtml:span>   helps the PostgreSQL Database to   <xhtml:span class=\"inline_block\">    Set the verbosity of logged messages  </xhtml:span>   which in turn generates query and error logs with respect to concurrent connections, that could lead to a successful Denial of Service (DoS) attack by exhausting connection resources. A system can also fail or be degraded by an overload of legitimate users. Query and error logs can be used to identify, troubleshoot, and repair configuration errors and sub-optimal performance.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Login to Azure Portal using https://portal.azure.com      </xhtml:li>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Azure Database        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          PostgreSQL server        </xhtml:span>      </xhtml:li>      <xhtml:li>        For each database, click on         <xhtml:span class=\"inline_block\">          Server parameters        </xhtml:span>      </xhtml:li>      <xhtml:li>        Search for         <xhtml:span class=\"inline_block\">          connection_throttling        </xhtml:span>        .      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          ON        </xhtml:span>         and save.      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface 2.0      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to update       <xhtml:span class=\"inline_block\">        connection_throttling      </xhtml:span>       configuration.    </xhtml:p>    <xhtml:code class=\"code_block\">          az postgres server configuration set --resource-group &lt;resourceGroupName&gt; --server-name &lt;serverName&gt; --name connection_throttling --value on    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.3.7_Ensure_server_parameter_log_retention_days_is_greater_than_3_days_for_PostgreSQL_Database_Server",
+                                            "title": "Ensure server parameter 'log_retention_days' is greater than 3 days for PostgreSQL Database Server",
+                                            "description": "<xhtml:p>  Enable   <xhtml:span class=\"inline_block\">    log_retention_days  </xhtml:span>   on   <xhtml:span class=\"inline_block\">    PostgreSQL Servers  </xhtml:span>  .</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Enabling   <xhtml:span class=\"inline_block\">    log_retention_days  </xhtml:span>   helps PostgreSQL Database to   <xhtml:span class=\"inline_block\">    Sets number of days a log file is retained  </xhtml:span>   which in turn generates query and error logs. Query and error logs can be used to identify, troubleshoot, and repair configuration errors and sub-optimal performance.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Login to Azure Portal using https://portal.azure.com      </xhtml:li>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Azure Database        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          PostgreSQL server        </xhtml:span>      </xhtml:li>      <xhtml:li>        For each database, click on         <xhtml:span class=\"inline_block\">          Server parameters        </xhtml:span>      </xhtml:li>      <xhtml:li>        Search for         <xhtml:span class=\"inline_block\">          log_retention_days        </xhtml:span>        .      </xhtml:li>      <xhtml:li>        Enter value in range 4-7 (inclusive) and save.      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface 2.0      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to update       <xhtml:span class=\"inline_block\">        log_retention_days      </xhtml:span>       configuration.    </xhtml:p>    <xhtml:code class=\"code_block\">           az postgres server configuration set --resource-group &lt;resourceGroupName&gt; --server-name &lt;serverName&gt; --name log_retention_days --value &lt;4-7&gt;    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_4.3.8_Ensure_Allow_access_to_Azure_services_for_PostgreSQL_Database_Server_is_disabled",
+                                            "title": "Ensure 'Allow access to Azure services' for PostgreSQL Database Server is disabled",
+                                            "description": "<xhtml:p>  Disable access from Azure services to PostgreSQL Database Server</xhtml:p>",
+                                            "rationale": "<xhtml:p>  If access from Azure services is enabled, the server's firewall will accept connections from all Azure resources, including resources not in your subscription. This is usually not a desired configuration. Instead, setup firewall rules to allow access from specific network ranges or VNET rules to allow access from specific virtual networks.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Login to Azure Portal using https://portal.azure.com      </xhtml:li>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Azure Database        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          PostgreSQL server        </xhtml:span>      </xhtml:li>      <xhtml:li>        For each database, click on         <xhtml:span class=\"inline_block\">          Connection security        </xhtml:span>      </xhtml:li>      <xhtml:li>        In         <xhtml:span class=\"inline_block\">          Firewall rules        </xhtml:span>      </xhtml:li>      <xhtml:li>        Ensure Allow access to Azure services is set to         <xhtml:span class=\"inline_block\">          OFF        </xhtml:span>        .      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Save        </xhtml:span>         to apply the changed rule.      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface 2.0      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to delete the AllowAllAzureIps rule for PostgreSQL Database.    </xhtml:p>    <xhtml:code class=\"code_block\">      az postgres server firewall-rule delete --name AllowAllAzureIps  --resource-group &lt;resourceGroupName&gt; --server-name &lt;serverName&gt;    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "Group": {
+                    "id": "xccdf_org.cisecurity.benchmarks_group_5_Logging_and_Monitoring",
+                    "title": "Logging and Monitoring",
+                    "description": "<xhtml:p>  This section covers security recommendations to follow to set logging and monitoring policies on an Azure Subscription.</xhtml:p>",
+                    "Groups": [
+                        {
+                            "Group": {
+                                "id": "xccdf_org.cisecurity.benchmarks_group_5.1_Configuring_Diagnostic_Settings",
+                                "title": "Configuring Diagnostic Settings",
+                                "description": "<xhtml:p>  The Azure Diagnostic Settings capture control/management activities performed on a subscription. By default, the Azure Portal retains activity logs only for 90 days.The Diagnostic Settings define the type of events that are stored or streamed and the outputs\u2014storage account and/or event hub.The Diagnostic Settings, if configured properly, can ensure that all activity logs are retained for longer duration.This section has recommendations for correctly configuring the Diagnostic Settings so that all activity logs captured are retained for longer periods.</xhtml:p><xhtml:p>  When configuring Diagnostic Settings you may choose to export in one of three ways in which you need to ensure appropriate data retention.  The options are Log Analytics, Event Hub, and a Storage Account.  It is important to ensure you are aware and have set retention as your organization sees fit.</xhtml:p>",
+                                "Rules": [
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.1.1_Ensure_that_a_Diagnostics_Setting_exists",
+                                            "title": "Ensure that a 'Diagnostics Setting' exists",
+                                            "description": "<xhtml:p>  Enable Diagnostic settings for exporting activity logs.Diagnostic setting are available for each individual resources within a subscription. Settings should be configured for all appropriate resources for your environment.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  A diagnostic setting controls how a diagnostic log is exported. By default, logs are retained only for 90 days. Diagnostic settings should be defined so that logs can be exported and stored for a longer duration in order to analyze security activities within an Azure subscription.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Click on the resource that has a diagnostic status of         <xhtml:span class=\"inline_block\">          disabled        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Add Diagnostic Settings        </xhtml:span>      </xhtml:li>      <xhtml:li>        Enter a         <xhtml:span class=\"inline_block\">          Diagnostic setting name        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select the appropriate log, metric, and destination. (This may be Log Analytics/Storage account or Event Hub)      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          save        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      Repeat these step for all resources as needed.    </xhtml:p>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.1.2_Ensure_Diagnostic_Setting_captures_appropriate_categories",
+                                            "title": "Ensure Diagnostic Setting captures appropriate categories",
+                                            "description": "<xhtml:p>  The diagnostic setting should be configured to log the appropriate activities from the control/management plane.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  A diagnostic setting controls how the diagnostic log is exported. Capturing the diagnostic setting categories for appropriate control/management plane activities allows proper alerting.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Azure Monitor        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Activity log        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click on         <xhtml:span class=\"inline_block\">          Diagnostic settings        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click on         <xhtml:span class=\"inline_block\">          Edit Settings        </xhtml:span>         for the diagnostic settings entry      </xhtml:li>      <xhtml:li>        Ensure that the following categories are checked:         <xhtml:span class=\"inline_block\">          Administrative, Alert, Policy, and Security        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using ARM Template via AZ PowerShell cmdlets      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Create a file to hold the JSON    </xhtml:p>    <xhtml:code class=\"code_block\">      {      <br/>          \"$schema\": \"https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#\",      <br/>          \"contentVersion\": \"1.0.0.0\",      <br/>          \"parameters\": {      <br/>            \"settingName\": {      <br/>                \"type\": \"String\"      <br/>            },      <br/>            \"workspaceId\": {      <br/>                \"type\": \"String\"      <br/>            }      <br/>          },      <br/>          \"resources\": [      <br/>            {      <br/>              \"type\": \"Microsoft.Insights/diagnosticSettings\",      <br/>              \"apiVersion\": \"2017-05-01-preview\",      <br/>              \"name\": \"[parameters('settingName')]\",      <br/>              \"dependsOn\": [],      <br/>              \"properties\": {      <br/>                \"workspaceId\": \"[parameters('workspaceId')]\",      <br/>                \"logs\": [      <br/>                  {      <br/>                  \"category\": \"Administrative\",      <br/>                  \"enabled\": true      <br/>                  },      <br/>                  {      <br/>                  \"category\": \"Alert\",      <br/>                  \"enabled\": true      <br/>                  },      <br/>                  {      <br/>                  \"category\": \"Autoscale\",      <br/>                  \"enabled\": false      <br/>                  },      <br/>                  {      <br/>                  \"category\": \"Policy\",      <br/>                  \"enabled\": true      <br/>                  },      <br/>                  {      <br/>                  \"category\": \"Recommendation\",      <br/>                  \"enabled\": false      <br/>                  },      <br/>                  {      <br/>                  \"category\": \"ResourceHealth\",      <br/>                  \"enabled\": false      <br/>                  },      <br/>                  {      <br/>                  \"category\": \"Security\",      <br/>                  \"enabled\": true      <br/>                  },      <br/>                  {      <br/>                  \"category\": \"ServiceHealth\",      <br/>                  \"enabled\": false      <br/>                  }      <br/>                ]      <br/>              }      <br/>            }      <br/>          ]      <br/>      }    </xhtml:code>    <xhtml:p>      Reference the JSON in the New-AzSubscriptionDeployment call    </xhtml:p>    <xhtml:code class=\"code_block\">      $OMSWorkspace = Get-AzResource  -ResourceType \"Microsoft.OperationalInsights/workspaces\" -Name  &lt;Workspace Name&gt;      <br/>      New-AzSubscriptionDeployment -Name CreateDiagnosticSetting -location eastus -TemplateFile CreateDiagnosticSetting.jsonc -settingName \"Send Activity log to workspace\" -workspaceId $OMSWorkspace.ResourceId    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.1.3_Ensure_the_storage_container_storing_the_activity_logs_is_not_publicly_accessible",
+                                            "title": "Ensure the storage container storing the activity logs is not publicly accessible",
+                                            "description": "<xhtml:p>  The storage account container containing the activity log export should not be publicly accessible.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Allowing public access to activity log content may aid an adversary in identifying weaknesses in the affected account's use or configuration.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Search for         <xhtml:span class=\"inline_block\">          Storage Accounts        </xhtml:span>         to access Storage account blade      </xhtml:li>      <xhtml:li>        Click on the storage account name      </xhtml:li>      <xhtml:li>        In Section         <xhtml:span class=\"inline_block\">          Blob Service        </xhtml:span>         click         <xhtml:span class=\"inline_block\">          Containers        </xhtml:span>        . It will list all the containers in next blade      </xhtml:li>      <xhtml:li>        Look for a record with container named as         <xhtml:span class=\"inline_block\">          insight-operational-logs        </xhtml:span>        . Click         <xhtml:span class=\"inline_block\">          ...        </xhtml:span>         from right most column to open         <xhtml:span class=\"inline_block\">          Context menu        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Access Policy        </xhtml:span>         from         <xhtml:span class=\"inline_block\">          Context Menu        </xhtml:span>         and set         <xhtml:span class=\"inline_block\">          Public Access Level        </xhtml:span>         to         <xhtml:span class=\"inline_block\">          Private (no anonymous access)        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface 2.0      </xhtml:strong>    </xhtml:p>    <xhtml:code class=\"code_block\">      az storage container set-permission --name insights-operational-logs --account-name &lt;Storage Account Name&gt; --public-access off    </xhtml:code>    <xhtml:p class=\"bold\">      Impact:    </xhtml:p>    <xhtml:p>      <xhtml:p>        Configuring container         <xhtml:span class=\"inline_block\">          Access policy        </xhtml:span>         to         <xhtml:span class=\"inline_block\">          private        </xhtml:span>         will remove access from the container for everyone except owners of the storage account. Access policy needs to be set explicitly in order to allow access to other desired users.      </xhtml:p>    </xhtml:p>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.1.4_Ensure_the_storage_account_containing_the_container_with_activity_logs_is_encrypted_with_BYOK_Use_Your_Own_Key",
+                                            "title": "Ensure the storage account containing the container with activity logs is encrypted with BYOK (Use Your Own Key)",
+                                            "description": "<xhtml:p>  The storage account with the activity log export container is configured to use BYOK (Use Your Own Key).</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Configuring the storage account with the activity log export container to use BYOK (Use Your Own Key) provides additional confidentiality controls on log data as a given user must have read permission on the corresponding storage account and must be granted decrypt permission by the CMK.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        In right column, Click service         <xhtml:span class=\"inline_block\">          Storage Accounts        </xhtml:span>         to access Storage account blade      </xhtml:li>      <xhtml:li>        Click on the storage account name      </xhtml:li>      <xhtml:li>        In Section         <xhtml:span class=\"inline_block\">          SETTINGS        </xhtml:span>         click         <xhtml:span class=\"inline_block\">          Encryption        </xhtml:span>        . It will show         <xhtml:span class=\"inline_block\">          Storage service encryption        </xhtml:span>         configuration pane.      </xhtml:li>      <xhtml:li>        Check         <xhtml:span class=\"inline_block\">          Use your own key        </xhtml:span>         which will expand         <xhtml:span class=\"inline_block\">          Encryption Key        </xhtml:span>         Settings      </xhtml:li>      <xhtml:li>        Use option         <xhtml:span class=\"inline_block\">          Enter key URI        </xhtml:span>         or         <xhtml:span class=\"inline_block\">          Select from Key Vault        </xhtml:span>         to set up encryption with your own key      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface 2.0      </xhtml:strong>    </xhtml:p>    <xhtml:code class=\"code_block\">      az storage account update --name &lt;name of the storage account&gt; --resource-group &lt;resource group for a storage account&gt; --encryption-key-source=Microsoft.Keyvault --encryption-key-vault &lt;Key Valut URI&gt; --encryption-key-name &lt;KeyName&gt; --encryption-key-version &lt;Key Version&gt;     </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.1.5_Ensure_that_logging_for_Azure_KeyVault_is_Enabled",
+                                            "title": "Ensure that logging for Azure KeyVault is 'Enabled'",
+                                            "description": "<xhtml:p>  Enable AuditEvent logging for key vault instances to ensure interactions with key vaults are logged and available.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Monitoring how and when key vaults are accessed, and by whom enables an audit trail of interactions with confidential information, keys and certificates managed by Azure Keyvault. Enabling logging for Key Vault saves information in an Azure storage account that the user provides. This creates a new container named insights-logs-auditevent automatically for the specified storage account, and this same storage account can be used for collecting logs for multiple key vaults.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      Follow Microsoft Azure documentation and setup Azure Key Vault Logging.    </xhtml:p>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Group": {
+                                "id": "xccdf_org.cisecurity.benchmarks_group_5.2_Monitoring_using_Activity_Log_Alerts",
+                                "title": "Monitoring using Activity Log Alerts",
+                                "description": "<xhtml:p>  This section covers security recommendations to follow in order to set alerting and monitoring for critical activities on an Azure subscription.</xhtml:p>",
+                                "Rules": [
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.2.1_Ensure_that_Activity_Log_Alert_exists_for_Create_Policy_Assignment",
+                                            "title": "Ensure that Activity Log Alert exists for Create Policy Assignment",
+                                            "description": "<xhtml:p>  Create an activity log alert for the Create Policy Assignment event.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Monitoring for create policy assignment events gives insight into changes done in \"azure policy - assignments\" and can reduce the time it takes to detect unsolicited changes.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Monitor        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Alerts        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click On         <xhtml:span class=\"inline_block\">          New Alert Rule        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Scope        </xhtml:span>        , click         <xhtml:span class=\"inline_block\">          Select resource        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select the appropriate subscription under         <xhtml:span class=\"inline_block\">          Filter by subscription        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Policy Assignment        </xhtml:span>         under         <xhtml:span class=\"inline_block\">          Filter by resource type        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          All        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          Filter by location        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click on the subscription resource from the entries populated under Resource      </xhtml:li>      <xhtml:li>        Verify Selection preview shows All Policy assignment (policyAssignments) and your selected subscription name      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Condition        </xhtml:span>         click         <xhtml:span class=\"inline_block\">          Add Condition        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Create policy assignment        </xhtml:span>         signal      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Action group        </xhtml:span>        , select         <xhtml:span class=\"inline_block\">          Add action groups        </xhtml:span>         and complete creation process or select appropriate action group      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Alert rule details        </xhtml:span>        , enter         <xhtml:span class=\"inline_block\">          Alert rule name        </xhtml:span>         and         <xhtml:span class=\"inline_block\">          Description        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select appropriate resource group to save the alert to      </xhtml:li>      <xhtml:li>        Check         <xhtml:span class=\"inline_block\">          Enable alert rule upon creation        </xhtml:span>         checkbox      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Create alert rule        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to create an Activity Log Alert for       <xhtml:span class=\"inline_block\">        Create policy assignment      </xhtml:span>    </xhtml:p>    <xhtml:code class=\"code_block\">      az account get-access-token --query \"{subscription:subscription,accessToken:accessToken}\" --out tsv | xargs -L1 bash -c 'curl -X PUT -H \"Authorization: Bearer $1\" -H \"Content-Type: application/json\" https://management.azure.com/subscriptions/$0/resourceGroups/&lt;Resource_Group_To Create_Alert_In&gt;/providers/microsoft.insights/activityLogAlerts/&lt;Unique_Alert_Name&gt;?api-version=2017-04-01 -d@\"input.json\"'    </xhtml:code>    <xhtml:p>      Where       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>       contains the Request body JSON data as mentioned below.    </xhtml:p>    <xhtml:code class=\"code_block\">      {      <br/>        \"location\": \"Global\",      <br/>        \"tags\": {},      <br/>        \"properties\": {      <br/>          \"scopes\": [      <br/>            \"/subscriptions/&lt;Subscription_ID&gt;\"      <br/>          ],      <br/>          \"enabled\": true,      <br/>        \"condition\": {      <br/>          \"allOf\": [      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Administrative\",      <br/>              \"field\": \"category\"      <br/>            },      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Microsoft.Authorization/policyAssignments/write\",      <br/>              \"field\": \"operationName\"      <br/>            }      <br/>          ]      <br/>        },      <br/>          \"actions\": {      <br/>          \"actionGroups\": [      <br/>            {      <br/>              \"actionGroupId\": \"/subscriptions/&lt;Subscription_ID&gt;/resourceGroups/&lt;Resource_Group_For_Alert_Group&gt;/providers/microsoft.insights/actionGroups/&lt;Alert_Group&gt;\",      <br/>              \"webhookProperties\": null      <br/>            }      <br/>          ]      <br/>        },      <br/>        }      <br/>      }    </xhtml:code>    <xhtml:p>      Configurable Parameters for command line:    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Resource_Group_To Create_Alert_In&gt;      <br/>      &lt;Unique_Alert_Name&gt;    </xhtml:code>    <xhtml:p>      Configurable Parameters for       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>      :    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Subscription_ID&gt; in scopes      <br/>      &lt;Subscription_ID&gt; in actionGroupId      <br/>      &lt;Resource_Group_For_Alert_Group&gt; in actionGroupId      <br/>      &lt;Alert_Group&gt; in actionGroupId    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.2.2_Ensure_that_Activity_Log_Alert_exists_for_Delete_Policy_Assignment",
+                                            "title": "Ensure that Activity Log Alert exists for Delete Policy Assignment",
+                                            "description": "<xhtml:p>  Create an activity log alert for the Delete Policy Assignment event.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Monitoring for delete policy assignment events gives insight into changes done in \"azure policy - assignments\" and can reduce the time it takes to detect unsolicited changes.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Monitor        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Alerts        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click On         <xhtml:span class=\"inline_block\">          New Alert Rule        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Scope        </xhtml:span>        , click         <xhtml:span class=\"inline_block\">          Select resource        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select the appropriate subscription under         <xhtml:span class=\"inline_block\">          Filter by subscription        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Policy Assignment        </xhtml:span>         under         <xhtml:span class=\"inline_block\">          Filter by resource type        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select All for Filter by location      </xhtml:li>      <xhtml:li>        Click on the subscription from the entries populated under Resource      </xhtml:li>      <xhtml:li>        Verify Selection preview shows All Policy assignment (policyAssignments) and your selected subscription name      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Condition        </xhtml:span>         click         <xhtml:span class=\"inline_block\">          Add Condition        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Delete policy assignment        </xhtml:span>         signal      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Action group        </xhtml:span>        , select         <xhtml:span class=\"inline_block\">          Add action groups        </xhtml:span>         and complete creation process or select appropriate action group      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Alert rule details        </xhtml:span>        , enter         <xhtml:span class=\"inline_block\">          Alert rule name        </xhtml:span>         and         <xhtml:span class=\"inline_block\">          Description        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select appropriate resource group to save the alert to      </xhtml:li>      <xhtml:li>        Check         <xhtml:span class=\"inline_block\">          Enable alert rule upon creation        </xhtml:span>         checkbox      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Create alert rule        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to create an Activity Log Alert for       <xhtml:span class=\"inline_block\">        Delete policy assignment      </xhtml:span>    </xhtml:p>    <xhtml:code class=\"code_block\">      az account get-access-token --query \"{subscription:subscription,accessToken:accessToken}\" --out tsv | xargs -L1 bash -c 'curl -X PUT -H \"Authorization: Bearer $1\" -H \"Content-Type: application/json\" https://management.azure.com/subscriptions/$0/resourceGroups/&lt;Resource_Group_To Create_Alert_In&gt;/providers/microsoft.insights/activityLogAlerts/&lt;Unique_Alert_Name&gt;?api-version=2017-04-01 -d@\"input.json\"'    </xhtml:code>    <xhtml:p>      Where       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>       contains the Request body JSON data as mentioned below.    </xhtml:p>    <xhtml:code class=\"code_block\">      {      <br/>        \"location\": \"Global\",      <br/>        \"tags\": {},      <br/>        \"properties\": {      <br/>          \"scopes\": [      <br/>            \"/subscriptions/&lt;Subscription_ID&gt;\"      <br/>          ],      <br/>          \"enabled\": true,      <br/>        \"condition\": {      <br/>          \"allOf\": [      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Administrative\",      <br/>              \"field\": \"category\"      <br/>            },      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Microsoft.Authorization/policyAssignments/delete\",      <br/>              \"field\": \"operationName\"      <br/>            }      <br/>          ]      <br/>        },      <br/>          \"actions\": {      <br/>          \"actionGroups\": [      <br/>            {      <br/>              \"actionGroupId\": \"/subscriptions/&lt;Subscription_ID&gt;/resourceGroups/&lt;Resource_Group_For_Alert_Group&gt;/providers/microsoft.insights/actionGroups/&lt;Alert_Group&gt;\",      <br/>              \"webhookProperties\": null      <br/>            }      <br/>          ]      <br/>        },      <br/>        }      <br/>      }    </xhtml:code>    <xhtml:p>      Configurable Parameters for command line:    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Resource_Group_To Create_Alert_In&gt;      <br/>      &lt;Unique_Alert_Name&gt;    </xhtml:code>    <xhtml:p>      Configurable Parameters for       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>      :    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Subscription_ID&gt; in scopes      <br/>      &lt;Subscription_ID&gt; in actionGroupId      <br/>      &lt;Resource_Group_For_Alert_Group&gt; in actionGroupId      <br/>      &lt;Alert_Group&gt; in actionGroupId    </xhtml:code>    <xhtml:p>      <xhtml:strong>        Using PowerShell AZ cmdlets      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to create an Activity Log Alert for       <xhtml:span class=\"inline_block\">        Delete policy assignment      </xhtml:span>    </xhtml:p>    <xhtml:code class=\"code_block\">      $ComplianceName = 'Delete Policy Assignment'      <br/>      $Signal = 'Microsoft.Authorization/policyAssignments/delete'      <br/>      $Category = 'Administrative'      <br/>      $ResourceGroupName = 'MyResourceGroup'      <br/>      $actiongroup = (Get-AzActionGroup -Name corenotifications -ResourceGroupName $ResourceGroupName)      <br/>      $ActionGroupId = (New-Object Microsoft.Azure.Management.Monitor.Models.ActivityLogAlertActionGroup $ActionGroup.Id)      <br/>      $Subscription = (Get-AzContext).Subscription      <br/>      $location = 'Global'      <br/>      $scope = \"/subscriptions/$($Subscription.Id)\"      <br/>      $alertName = \"$($Subscription.Name) - $($ComplianceName)\"      <br/>      $conditions = @(      <br/>          New-AzActivityLogAlertCondition -Field 'category' -Equal $Category      <br/>          New-AzActivityLogAlertCondition -Field 'operationName' -Equal $Signal      <br/>      )      <br/>      Set-AzActivityLogAlert -Location $location -Name $alertName -ResourceGroupName $ResourceGroupName -Scope $scope -Action $ActionGroupId -Condition $conditions    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.2.3_Ensure_that_Activity_Log_Alert_exists_for_Create_or_Update_Network_Security_Group",
+                                            "title": "Ensure that Activity Log Alert exists for Create or Update Network Security Group",
+                                            "description": "<xhtml:p>  Create an Activity Log Alert for the \"Create\" or \"Update Network Security Group\" event.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Monitoring for \"Create\" or \"Update Network Security Group\" events gives insight into network access changes and may reduce the time it takes to detect suspicious activity.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Monitor        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Alerts        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click On         <xhtml:span class=\"inline_block\">          New Alert Rule        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Scope        </xhtml:span>        , click         <xhtml:span class=\"inline_block\">          Select resource        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select the appropriate subscription under         <xhtml:span class=\"inline_block\">          Filter by subscription        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Network Security Groups        </xhtml:span>         under Filter by resource type      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          All        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          Filter by location        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click on the subscription resource from the entries populated under Resource      </xhtml:li>      <xhtml:li>        Verify Selection preview shows All Network Security Groups and your selected subscription name      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Condition        </xhtml:span>         click         <xhtml:span class=\"inline_block\">          Add Condition        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Create or Update Network Security Group        </xhtml:span>         signal      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Action group        </xhtml:span>        , select         <xhtml:span class=\"inline_block\">          Add action groups        </xhtml:span>         and complete creation process or select appropriate action group      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Alert rule details        </xhtml:span>        , enter         <xhtml:span class=\"inline_block\">          Alert rule name        </xhtml:span>         and         <xhtml:span class=\"inline_block\">          Description        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select appropriate resource group to save the alert to      </xhtml:li>      <xhtml:li>        Check         <xhtml:span class=\"inline_block\">          Enable alert rule upon creation        </xhtml:span>         checkbox      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Create alert rule        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to create an Activity Log Alert for       <xhtml:span class=\"inline_block\">        Create or Update Network Security Groups      </xhtml:span>    </xhtml:p>    <xhtml:code class=\"code_block\">      az account get-access-token --query \"{subscription:subscription,accessToken:accessToken}\" --out tsv | xargs -L1 bash -c 'curl -X PUT -H \"Authorization: Bearer $1\" -H \"Content-Type: application/json\" https://management.azure.com/subscriptions/$0/resourceGroups/&lt;Resource_Group_To Create_Alert_In&gt;/providers/microsoft.insights/activityLogAlerts/&lt;Unique_Alert_Name&gt;?api-version=2017-04-01 -d@\"input.json\"'    </xhtml:code>    <xhtml:p>      Where       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>       contains the Request body JSON data as mentioned below.    </xhtml:p>    <xhtml:code class=\"code_block\">      {      <br/>        \"location\": \"Global\",      <br/>        \"tags\": {},      <br/>        \"properties\": {      <br/>          \"scopes\": [      <br/>            \"/subscriptions/&lt;Subscription_ID&gt;\"      <br/>          ],      <br/>          \"enabled\": true,      <br/>        \"condition\": {      <br/>          \"allOf\": [      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Administrative\",      <br/>              \"field\": \"category\"      <br/>            },      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Microsoft.Network/networkSecurityGroups/write\",      <br/>              \"field\": \"operationName\"      <br/>            }      <br/>          ]      <br/>        },      <br/>          \"actions\": {      <br/>          \"actionGroups\": [      <br/>            {      <br/>              \"actionGroupId\": \"/subscriptions/&lt;Subscription_ID&gt;/resourceGroups/&lt;Resource_Group_For_Alert_Group&gt;/providers/microsoft.insights/actionGroups/&lt;Alert_Group&gt;\",      <br/>              \"webhookProperties\": null      <br/>            }      <br/>          ]      <br/>        },      <br/>        }      <br/>      }    </xhtml:code>    <xhtml:p>      Configurable Parameters for command line:    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Resource_Group_To Create_Alert_In&gt;      <br/>      &lt;Unique_Alert_Name&gt;    </xhtml:code>    <xhtml:p>      Configurable Parameters for       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>      :    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Subscription_ID&gt; in scopes      <br/>      &lt;Subscription_ID&gt; in actionGroupId      <br/>      &lt;Resource_Group_For_Alert_Group&gt; in actionGroupId      <br/>      &lt;Alert_Group&gt; in actionGroupId    </xhtml:code>    <xhtml:p>      }    </xhtml:p>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.2.4_Ensure_that_Activity_Log_Alert_exists_for_Delete_Network_Security_Group",
+                                            "title": "Ensure that Activity Log Alert exists for Delete Network Security Group",
+                                            "description": "<xhtml:p>  Create an activity log alert for the Delete Network Security Group event.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Monitoring for \"Delete Network Security Group\" events gives insight into network access changes and may reduce the time it takes to detect suspicious activity.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Monitor        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Alerts        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click On         <xhtml:span class=\"inline_block\">          New Alert Rule        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Scope        </xhtml:span>        , click         <xhtml:span class=\"inline_block\">          Select resource        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select the appropriate subscription under         <xhtml:span class=\"inline_block\">          Filter by subscription        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Network Security Groups        </xhtml:span>         under         <xhtml:span class=\"inline_block\">          Filter by resource type        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          All        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          Filter by location        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click on the subscription resource from the entries populated under Resource      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Verify Selection preview shows Network Security Groups and your selected subscription name      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Condition        </xhtml:span>         click         <xhtml:span class=\"inline_block\">          Add Condition        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Delete Network Security Group        </xhtml:span>         signal      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Action group        </xhtml:span>        , select         <xhtml:span class=\"inline_block\">          Add action groups        </xhtml:span>         and complete creation process or select appropriate action group      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Alert rule details        </xhtml:span>        , enter         <xhtml:span class=\"inline_block\">          Alert rule name        </xhtml:span>         and         <xhtml:span class=\"inline_block\">          Description        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select appropriate resource group to save the alert to      </xhtml:li>      <xhtml:li>        Check         <xhtml:span class=\"inline_block\">          Enable alert rule upon creation        </xhtml:span>         checkbox      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Create alert rule        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to create an Activity Log Alert for       <xhtml:span class=\"inline_block\">        Delete Network Security Groups      </xhtml:span>    </xhtml:p>    <xhtml:code class=\"code_block\">      az account get-access-token --query \"{subscription:subscription,accessToken:accessToken}\" --out tsv | xargs -L1 bash -c 'curl -X PUT -H \"Authorization: Bearer $1\" -H \"Content-Type: application/json\" https://management.azure.com/subscriptions/$0/resourceGroups/&lt;Resource_Group_To Create_Alert_In&gt;/providers/microsoft.insights/activityLogAlerts/&lt;Unique_Alert_Name&gt;?api-version=2017-04-01 -d@\"input.json\"'    </xhtml:code>    <xhtml:p>      Where       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>       contains the Request body JSON data as mentioned below.    </xhtml:p>    <xhtml:code class=\"code_block\">      {      <br/>        \"location\": \"Global\",      <br/>        \"tags\": {},      <br/>        \"properties\": {      <br/>          \"scopes\": [      <br/>            \"/subscriptions/&lt;Subscription_ID&gt;\"      <br/>          ],      <br/>          \"enabled\": true,      <br/>        \"condition\": {      <br/>          \"allOf\": [      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Administrative\",      <br/>              \"field\": \"category\"      <br/>            },      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Microsoft.Network/networkSecurityGroups/delete\",      <br/>              \"field\": \"operationName\"      <br/>            }      <br/>          ]      <br/>        },      <br/>          \"actions\": {      <br/>          \"actionGroups\": [      <br/>            {      <br/>              \"actionGroupId\": \"/subscriptions/&lt;Subscription_ID&gt;/resourceGroups/&lt;Resource_Group_For_Alert_Group&gt;/providers/microsoft.insights/actionGroups/&lt;Alert_Group&gt;\",      <br/>              \"webhookProperties\": null      <br/>            }      <br/>          ]      <br/>        },      <br/>        }      <br/>      }    </xhtml:code>    <xhtml:p>      Configurable Parameters for command line:    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Resource_Group_To Create_Alert_In&gt;      <br/>      &lt;Unique_Alert_Name&gt;    </xhtml:code>    <xhtml:p>      Configurable Parameters for       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>      :    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Subscription_ID&gt; in scopes      <br/>      &lt;Subscription_ID&gt; in actionGroupId      <br/>      &lt;Resource_Group_For_Alert_Group&gt; in actionGroupId      <br/>      &lt;Alert_Group&gt; in actionGroupId    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.2.5_Ensure_that_Activity_Log_Alert_exists_for_Create_or_Update_Network_Security_Group_Rule",
+                                            "title": "Ensure that Activity Log Alert exists for Create or Update Network Security Group Rule",
+                                            "description": "<xhtml:p>  Create an activity log alert for the Create or Update Network Security Group Rule event.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Monitoring for Create or Update Network Security Group Rule events gives insight into network access changes and may reduce the time it takes to detect suspicious activity.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Monitor        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Alerts        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click On         <xhtml:span class=\"inline_block\">          New Alert Rule        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Scope        </xhtml:span>        , click         <xhtml:span class=\"inline_block\">          Select resource        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select the appropriate subscription under         <xhtml:span class=\"inline_block\">          Filter by subscription        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Network Security Group Rules        </xhtml:span>         under         <xhtml:span class=\"inline_block\">          Filter by resource type        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          All        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          Filter by location        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click on the subscription resource from the entries populated under Resource      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Verify Selection preview shows Network Security Group Rules and your selected subscription name      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Condition        </xhtml:span>         click         <xhtml:span class=\"inline_block\">          Add Condition        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Create or Update Network Security Group Rule        </xhtml:span>         signal      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Action group        </xhtml:span>        , select         <xhtml:span class=\"inline_block\">          Add action groups        </xhtml:span>         and complete creation process or select appropriate action group      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Alert rule details        </xhtml:span>        , enter         <xhtml:span class=\"inline_block\">          Alert rule name        </xhtml:span>         and         <xhtml:span class=\"inline_block\">          Description        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select appropriate resource group to save the alert to      </xhtml:li>      <xhtml:li>        Check         <xhtml:span class=\"inline_block\">          Enable alert rule upon creation        </xhtml:span>         checkbox      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Create alert rule        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to create an Activity Log Alert for       <xhtml:span class=\"inline_block\">        Create or Update Network Security Groups rule      </xhtml:span>    </xhtml:p>    <xhtml:code class=\"code_block\">      az account get-access-token --query \"{subscription:subscription,accessToken:accessToken}\" --out tsv | xargs -L1 bash -c 'curl -X PUT -H \"Authorization: Bearer $1\" -H \"Content-Type: application/json\" https://management.azure.com/subscriptions/$0/resourceGroups/&lt;Resource_Group_To Create_Alert_In&gt;/providers/microsoft.insights/activityLogAlerts/&lt;Unique_Alert_Name&gt;?api-version=2017-04-01 -d@\"input.json\"'    </xhtml:code>    <xhtml:p>      Where       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>       contains the Request body JSON data as mentioned below.    </xhtml:p>    <xhtml:code class=\"code_block\">      {      <br/>        \"location\": \"Global\",      <br/>        \"tags\": {},      <br/>        \"properties\": {      <br/>          \"scopes\": [      <br/>            \"/subscriptions/&lt;Subscription_ID&gt;\"      <br/>          ],      <br/>          \"enabled\": true,      <br/>        \"condition\": {      <br/>          \"allOf\": [      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Administrative\",      <br/>              \"field\": \"category\"      <br/>            },      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Microsoft.Network/networkSecurityGroups/securityRules/write\",      <br/>              \"field\": \"operationName\"      <br/>            }      <br/>          ]      <br/>        },      <br/>          \"actions\": {      <br/>          \"actionGroups\": [      <br/>            {      <br/>              \"actionGroupId\": \"/subscriptions/&lt;Subscription_ID&gt;/resourceGroups/&lt;Resource_Group_For_Alert_Group&gt;/providers/microsoft.insights/actionGroups/&lt;Alert_Group&gt;\",      <br/>              \"webhookProperties\": null      <br/>            }      <br/>          ]      <br/>        },      <br/>        }      <br/>      }    </xhtml:code>    <xhtml:p>      Configurable Parameters for command line:    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Resource_Group_To Create_Alert_In&gt;      <br/>      &lt;Unique_Alert_Name&gt;    </xhtml:code>    <xhtml:p>      Configurable Parameters for       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>      :    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Subscription_ID&gt; in scopes      <br/>      &lt;Subscription_ID&gt; in actionGroupId      <br/>      &lt;Resource_Group_For_Alert_Group&gt; in actionGroupId      <br/>      &lt;Alert_Group&gt; in actionGroupId    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.2.6_Ensure_that_activity_log_alert_exists_for_the_Delete_Network_Security_Group_Rule",
+                                            "title": "Ensure that activity log alert exists for the Delete Network Security Group Rule",
+                                            "description": "<xhtml:p>  Create an activity log alert for the Delete Network Security Group Rule event.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Monitoring for Delete Network Security Group Rule events gives insight into network access changes and may reduce the time it takes to detect suspicious activity.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Monitor        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Alerts        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click On         <xhtml:span class=\"inline_block\">          New Alert Rule        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Scope        </xhtml:span>        , click         <xhtml:span class=\"inline_block\">          Select resource        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select the appropriate subscription under         <xhtml:span class=\"inline_block\">          Filter by subscription        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Network Security Group Rules        </xhtml:span>         under         <xhtml:span class=\"inline_block\">          Filter by resource type        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          All        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          Filter by location        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click on the subscription resource from the entries populated under Resource      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Verify Selection preview shows Network Security Group Rules and your selected subscription name      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Condition        </xhtml:span>         click         <xhtml:span class=\"inline_block\">          Add Condition        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Delete Network Security Group Rule        </xhtml:span>         signal      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Action group        </xhtml:span>        , select         <xhtml:span class=\"inline_block\">          Add action groups        </xhtml:span>         and complete creation process or select appropriate action group      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Alert rule details        </xhtml:span>        , enter         <xhtml:span class=\"inline_block\">          Alert rule name        </xhtml:span>         and         <xhtml:span class=\"inline_block\">          Description        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select appropriate resource group to save the alert to      </xhtml:li>      <xhtml:li>        Check         <xhtml:span class=\"inline_block\">          Enable alert rule upon creation        </xhtml:span>         checkbox      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Create alert rule        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to create an Activity Log Alert for       <xhtml:span class=\"inline_block\">        Delete Network Security Groups rule      </xhtml:span>    </xhtml:p>    <xhtml:code class=\"code_block\">      az account get-access-token --query \"{subscription:subscription,accessToken:accessToken}\" --out tsv | xargs -L1 bash -c 'curl -X PUT -H \"Authorization: Bearer $1\" -H \"Content-Type: application/json\" https://management.azure.com/subscriptions/$0/resourceGroups/&lt;Resource_Group_To Create_Alert_In&gt;/providers/microsoft.insights/activityLogAlerts/&lt;Unique_Alert_Name&gt;?api-version=2017-04-01 -d@\"input.json\"'    </xhtml:code>    <xhtml:p>      Where       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>       contains the Request body JSON data as mentioned below.    </xhtml:p>    <xhtml:code class=\"code_block\">      {      <br/>        \"location\": \"Global\",      <br/>        \"tags\": {},      <br/>        \"properties\": {      <br/>          \"scopes\": [      <br/>            \"/subscriptions/&lt;Subscription_ID&gt;\"      <br/>          ],      <br/>          \"enabled\": true,      <br/>        \"condition\": {      <br/>          \"allOf\": [      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Administrative\",      <br/>              \"field\": \"category\"      <br/>            },      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Microsoft.Network/networkSecurityGroups/securityRules/delete\",      <br/>              \"field\": \"operationName\"      <br/>            }      <br/>          ]      <br/>        },      <br/>          \"actions\": {      <br/>          \"actionGroups\": [      <br/>            {      <br/>              \"actionGroupId\": \"/subscriptions/&lt;Subscription_ID&gt;/resourceGroups/&lt;Resource_Group_For_Alert_Group&gt;/providers/microsoft.insights/actionGroups/&lt;Alert_Group&gt;\",      <br/>              \"webhookProperties\": null      <br/>            }      <br/>          ]      <br/>        },      <br/>        }      <br/>      }    </xhtml:code>    <xhtml:p>      Configurable Parameters for command line:    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Resource_Group_To Create_Alert_In&gt;      <br/>      &lt;Unique_Alert_Name&gt;    </xhtml:code>    <xhtml:p>      Configurable Parameters for       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>      :    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Subscription_ID&gt; in scopes      <br/>      &lt;Subscription_ID&gt; in actionGroupId      <br/>      &lt;Resource_Group_For_Alert_Group&gt; in actionGroupId      <br/>      &lt;Alert_Group&gt; in actionGroupId    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.2.7_Ensure_that_Activity_Log_Alert_exists_for_Create_or_Update_Security_Solution",
+                                            "title": "Ensure that Activity Log Alert exists for Create or Update Security Solution",
+                                            "description": "<xhtml:p>  Create an activity log alert for the Create or Update Security Solution event.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Monitoring for Create or Update Security Solution events gives insight into changes to the active security solutions and may reduce the time it takes to detect suspicious activity.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Monitor        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Alerts        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click On         <xhtml:span class=\"inline_block\">          New Alert Rule        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Scope        </xhtml:span>        , click         <xhtml:span class=\"inline_block\">          Select resource        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select the appropriate subscription under         <xhtml:span class=\"inline_block\">          Filter by subscription        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Security Solutions        </xhtml:span>         under         <xhtml:span class=\"inline_block\">          Filter by resource type        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          All        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          Filter by location        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click on the subscription resource from the entries populated under Resource      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Verify Selection preview shows Security Solutions and your selected subscription name      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Condition        </xhtml:span>         click         <xhtml:span class=\"inline_block\">          Add Condition        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Create or Update Security Solutions        </xhtml:span>         signal      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Action group        </xhtml:span>        , select         <xhtml:span class=\"inline_block\">          Add action groups        </xhtml:span>         and complete creation process or select appropriate action group      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Alert rule details        </xhtml:span>        , enter         <xhtml:span class=\"inline_block\">          Alert rule name        </xhtml:span>         and         <xhtml:span class=\"inline_block\">          Description        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select appropriate resource group to save the alert to      </xhtml:li>      <xhtml:li>        Check         <xhtml:span class=\"inline_block\">          Enable alert rule upon creation        </xhtml:span>         checkbox      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Create alert rule        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to create an Activity Log Alert for       <xhtml:span class=\"inline_block\">        Create or Update Security Solutions      </xhtml:span>    </xhtml:p>    <xhtml:code class=\"code_block\">      az account get-access-token --query \"{subscription:subscription,accessToken:accessToken}\" --out tsv | xargs -L1 bash -c 'curl -X PUT -H \"Authorization: Bearer $1\" -H \"Content-Type: application/json\" https://management.azure.com/subscriptions/$0/resourceGroups/&lt;Resource_Group_To Create_Alert_In&gt;/providers/microsoft.insights/activityLogAlerts/&lt;Unique_Alert_Name&gt;?api-version=2017-04-01 -d@\"input.json\"'    </xhtml:code>    <xhtml:p>      Where       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>       contains the Request body JSON data as mentioned below.    </xhtml:p>    <xhtml:code class=\"code_block\">      {      <br/>        \"location\": \"Global\",      <br/>        \"tags\": {},      <br/>        \"properties\": {      <br/>          \"scopes\": [      <br/>            \"/subscriptions/&lt;Subscription_ID&gt;\"      <br/>          ],      <br/>          \"enabled\": true,      <br/>        \"condition\": {      <br/>          \"allOf\": [      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Security\",      <br/>              \"field\": \"category\"      <br/>            },      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Microsoft.Security/securitySolutions/write\",      <br/>              \"field\": \"operationName\"      <br/>            }      <br/>          ]      <br/>        },      <br/>          \"actions\": {      <br/>          \"actionGroups\": [      <br/>            {      <br/>              \"actionGroupId\": \"/subscriptions/&lt;Subscription_ID&gt;/resourceGroups/&lt;Resource_Group_For_Alert_Group&gt;/providers/microsoft.insights/actionGroups/&lt;Alert_Group&gt;\",      <br/>              \"webhookProperties\": null      <br/>            }      <br/>          ]      <br/>        },      <br/>        }      <br/>      }    </xhtml:code>    <xhtml:p>      Configurable Parameters for command line:    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Resource_Group_To Create_Alert_In&gt;      <br/>      &lt;Unique_Alert_Name&gt;    </xhtml:code>    <xhtml:p>      Configurable Parameters for       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>      :    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Subscription_ID&gt; in scopes      <br/>      &lt;Subscription_ID&gt; in actionGroupId      <br/>      &lt;Resource_Group_For_Alert_Group&gt; in actionGroupId      <br/>      &lt;Alert_Group&gt; in actionGroupId    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.2.8_Ensure_that_Activity_Log_Alert_exists_for_Delete_Security_Solution",
+                                            "title": "Ensure that Activity Log Alert exists for Delete Security Solution",
+                                            "description": "<xhtml:p>  Create an activity log alert for the Delete Security Solution event.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Monitoring for Delete Security Solution events gives insight into changes to the active security solutions and may reduce the time it takes to detect suspicious activity.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Monitor        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Alerts        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click On         <xhtml:span class=\"inline_block\">          New Alert Rule        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Scope        </xhtml:span>        , click         <xhtml:span class=\"inline_block\">          Select resource        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select the appropriate subscription under         <xhtml:span class=\"inline_block\">          Filter by subscription        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Security Solutions        </xhtml:span>         under         <xhtml:span class=\"inline_block\">          Filter by resource type        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          All        </xhtml:span>         for         <xhtml:span class=\"inline_block\">          Filter by location        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click on the subscription resource from the entries populated under Resource      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Verify Selection preview shows Security Solutions and your selected subscription name      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Condition        </xhtml:span>         click         <xhtml:span class=\"inline_block\">          Add Condition        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Delete Security Solutions        </xhtml:span>         signal      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Action group        </xhtml:span>        , select         <xhtml:span class=\"inline_block\">          Add action groups        </xhtml:span>         and complete creation process or select appropriate action group      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Alert rule details        </xhtml:span>        , enter         <xhtml:span class=\"inline_block\">          Alert rule name        </xhtml:span>         and         <xhtml:span class=\"inline_block\">          Description        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select appropriate resource group to save the alert to      </xhtml:li>      <xhtml:li>        Check         <xhtml:span class=\"inline_block\">          Enable alert rule upon creation        </xhtml:span>         checkbox      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Create alert rule        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to create an Activity Log Alert for       <xhtml:span class=\"inline_block\">        Delete Security Solutions      </xhtml:span>    </xhtml:p>    <xhtml:code class=\"code_block\">      az account get-access-token --query \"{subscription:subscription,accessToken:accessToken}\" --out tsv | xargs -L1 bash -c 'curl -X PUT -H \"Authorization: Bearer $1\" -H \"Content-Type: application/json\" https://management.azure.com/subscriptions/$0/resourceGroups/&lt;Resource_Group_To Create_Alert_In&gt;/providers/microsoft.insights/activityLogAlerts/&lt;Unique_Alert_Name&gt;?api-version=2017-04-01 -d@\"input.json\"'    </xhtml:code>    <xhtml:p>      Where       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>       contains the Request body JSON data as mentioned below.    </xhtml:p>    <xhtml:code class=\"code_block\">      {      <br/>        \"location\": \"Global\",      <br/>        \"tags\": {},      <br/>        \"properties\": {      <br/>          \"scopes\": [      <br/>            \"/subscriptions/&lt;Subscription_ID&gt;\"      <br/>          ],      <br/>          \"enabled\": true,      <br/>        \"condition\": {      <br/>          \"allOf\": [      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Security\",      <br/>              \"field\": \"category\"      <br/>            },      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Microsoft.Security/securitySolutions/delete\",      <br/>              \"field\": \"operationName\"      <br/>            }      <br/>          ]      <br/>        },      <br/>          \"actions\": {      <br/>          \"actionGroups\": [      <br/>            {      <br/>              \"actionGroupId\": \"/subscriptions/&lt;Subscription_ID&gt;/resourceGroups/&lt;Resource_Group_For_Alert_Group&gt;/providers/microsoft.insights/actionGroups/&lt;Alert_Group&gt;\",      <br/>              \"webhookProperties\": null      <br/>            }      <br/>          ]      <br/>        },      <br/>        }      <br/>      }    </xhtml:code>    <xhtml:p>      Configurable Parameters for command line:    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Resource_Group_To Create_Alert_In&gt;      <br/>      &lt;Unique_Alert_Name&gt;    </xhtml:code>    <xhtml:p>      Configurable Parameters for       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>      :    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Subscription_ID&gt; in scopes      <br/>      &lt;Subscription_ID&gt; in actionGroupId      <br/>      &lt;Resource_Group_For_Alert_Group&gt; in actionGroupId      <br/>      &lt;Alert_Group&gt; in actionGroupId    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    },
+                                    {
+                                        "Rule": {
+                                            "id": "xccdf_org.cisecurity.benchmarks_rule_5.2.9_Ensure_that_Activity_Log_Alert_exists_for_Create_or_Update_or_Delete_SQL_Server_Firewall_Rule",
+                                            "title": "Ensure that Activity Log Alert exists for Create or Update or Delete SQL Server Firewall Rule",
+                                            "description": "<xhtml:p>  Create an activity log alert for the Create or Update or Delete SQL Server Firewall Rule event.</xhtml:p>",
+                                            "rationale": "<xhtml:p>  Monitoring for Create or Update or Delete SQL Server Firewall Rule events gives insight into network access changes and may reduce the time it takes to detect suspicious activity.</xhtml:p>",
+                                            "fixtext": "<xhtml:div>  <xhtml:p>    <xhtml:p>      <xhtml:strong>        From Azure Console      </xhtml:strong>    </xhtml:p>    <xhtml:ol>      <xhtml:li>        Go to         <xhtml:span class=\"inline_block\">          Monitor        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          Alerts        </xhtml:span>      </xhtml:li>      <xhtml:li>        Click On         <xhtml:span class=\"inline_block\">          New Alert Rule        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Scope        </xhtml:span>        , click         <xhtml:span class=\"inline_block\">          Select resource        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select the appropriate subscription under         <xhtml:span class=\"inline_block\">          Filter by subscription        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          SQL servers        </xhtml:span>         under         <xhtml:span class=\"inline_block\">          Filter by resource type        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select All for Filter by location      </xhtml:li>      <xhtml:li>        Click on the subscription from the entries populated under Resource      </xhtml:li>      <xhtml:li>        Verify Selection preview shows SQL servers and your selected subscription name      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Condition        </xhtml:span>         click         <xhtml:span class=\"inline_block\">          Add Condition        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select         <xhtml:span class=\"inline_block\">          All Administrative operations        </xhtml:span>         signal      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Done        </xhtml:span>      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Action group        </xhtml:span>        , select         <xhtml:span class=\"inline_block\">          Add action groups        </xhtml:span>         and complete creation process or select appropriate action group      </xhtml:li>      <xhtml:li>        Under         <xhtml:span class=\"inline_block\">          Alert rule details        </xhtml:span>        , enter         <xhtml:span class=\"inline_block\">          Alert rule name        </xhtml:span>         and         <xhtml:span class=\"inline_block\">          Description        </xhtml:span>      </xhtml:li>      <xhtml:li>        Select appropriate resource group to save the alert to      </xhtml:li>      <xhtml:li>        Check         <xhtml:span class=\"inline_block\">          Enable alert rule upon creation        </xhtml:span>         checkbox      </xhtml:li>      <xhtml:li>        Click         <xhtml:span class=\"inline_block\">          Create alert rule        </xhtml:span>      </xhtml:li>    </xhtml:ol>    <xhtml:p>      <xhtml:strong>        Using Azure Command Line Interface      </xhtml:strong>    </xhtml:p>    <xhtml:p>      Use the below command to create an Activity Log Alert for       <xhtml:span class=\"inline_block\">        Create or Update or Delete SQL Firewall Rule      </xhtml:span>    </xhtml:p>    <xhtml:code class=\"code_block\">      az account get-access-token --query \"{subscription:subscription,accessToken:accessToken}\" --out tsv | xargs -L1 bash -c 'curl -X PUT -H \"Authorization: Bearer $1\" -H \"Content-Type: application/json\" https://management.azure.com/subscriptions/$0/resourceGroups/&lt;Resource_Group_To Create_Alert_In&gt;/providers/microsoft.insights/activityLogAlerts/&lt;Unique_Alert_Name&gt;?api-version=2017-04-01 -d@\"input.json\"'    </xhtml:code>    <xhtml:p>      Where       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>       contains the Request body JSON data as mentioned below.    </xhtml:p>    <xhtml:code class=\"code_block\">      {      <br/>        \"location\": \"Global\",      <br/>        \"tags\": {},      <br/>        \"properties\": {      <br/>          \"scopes\": [      <br/>            \"/subscriptions/&lt;Subscription_ID&gt;\"      <br/>          ],      <br/>          \"enabled\": true,      <br/>        \"condition\": {      <br/>          \"allOf\": [      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Administrative\",      <br/>              \"field\": \"category\"      <br/>            },      <br/>            {      <br/>              \"containsAny\": null,      <br/>              \"equals\": \"Microsoft.Sql/servers/firewallRules/write\",      <br/>              \"field\": \"operationName\"      <br/>            }      <br/>          ]      <br/>        },      <br/>          \"actions\": {      <br/>          \"actionGroups\": [      <br/>            {      <br/>              \"actionGroupId\": \"/subscriptions/&lt;Subscription_ID&gt;/resourceGroups/&lt;Resource_Group_For_Alert_Group&gt;/providers/microsoft.insights/actionGroups/&lt;Alert_Group&gt;\",      <br/>              \"webhookProperties\": null      <br/>            }      <br/>          ]      <br/>        },      <br/>        }      <br/>      }    </xhtml:code>    <xhtml:p>      Configurable Parameters for command line:    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Resource_Group_To Create_Alert_In&gt;      <br/>      &lt;Unique_Alert_Name&gt;    </xhtml:code>    <xhtml:p>      Configurable Parameters for       <xhtml:span class=\"inline_block\">        input.json      </xhtml:span>      :    </xhtml:p>    <xhtml:code class=\"code_block\">      &lt;Subscription_ID&gt; in scopes      <br/>      &lt;Subscription_ID&gt; in actionGroupId      <br/>      &lt;Resource_Group_For_Alert_Group&gt; in actionGroupId      <br/>      &lt;Alert_Group&gt; in actionGroupId    </xhtml:code>    <xhtml:p/>  </xhtml:p></xhtml:div>"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "Group": {
+                    "id": "xccdf_org.cisecurity.benchmarks_group_6_Networking",
+                    "title": "Networking",
+                    "description": "<xhtml:p>  This section covers security recommendations to follow in order to set networking policies on an Azure subscription.</xhtml:p>"
+                }
+            },
+            {
+                "Group": {
+                    "id": "xccdf_org.cisecurity.benchmarks_group_7_Virtual_Machines",
+                    "title": "Virtual Machines",
+                    "description": "<xhtml:p>  This section covers security recommendations to follow in order to set virtual machine policies on an Azure subscription.</xhtml:p>"
+                }
+            },
+            {
+                "Group": {
+                    "id": "xccdf_org.cisecurity.benchmarks_group_8_Other_Security_Considerations",
+                    "title": "Other Security Considerations",
+                    "description": "<xhtml:p>  This section covers security recommendations to follow in order to set general security and operational controls on an Azure Subscription.</xhtml:p>"
+                }
+            },
+            {
+                "Group": {
+                    "id": "xccdf_org.cisecurity.benchmarks_group_9_AppService",
+                    "title": "AppService",
+                    "description": "<xhtml:p>  This section covers security recommendations for Azure AppService.</xhtml:p>"
+                }
+            }
+        ]
+    }
+}
